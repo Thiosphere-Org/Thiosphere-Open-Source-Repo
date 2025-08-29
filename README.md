@@ -1,16 +1,34 @@
+# Thiosphere - Modular Open Source Spaces
+
+[![CERN Open Hardware License v2](https://img.shields.io/badge/License-CERN%20OHL%20v2%20Strongly%20Reciprocal-blue.svg)](LICENSE.md)
+[![Open Source Hardware](https://img.shields.io/badge/Open%20Source-Hardware-green.svg)](https://www.oshwa.org/)
+[![Documentation](https://img.shields.io/badge/Documentation-Complete-brightgreen.svg)](docs/)
+
+## 🌍 Language Selection / Selección de Idioma / Sprachauswahl / Sélection de Langue / Språkval / Kielen Valinta
+
+- [🇺🇸 English](README.md)
+- [🇩🇪 Deutsch](README.de.md)
+- [🇪🇸 Español](README.es.md)
+- [🇫🇷 Français](README.fr.md)
+- [🇸🇪 Svenska](README.sv.md)
+- [🇫🇮 Suomi](README.fi.md)
+
+---
+
 # Modular Open Source Spaces
-We have formatted our world for cars, yet have little else to make use of all that space we have given over to these machines. A Thiosphere™ is created to fill that void with a purpose and beauty that defines its bold and efficient design. It is Open Source Hardware that anyone can build and modify to their own needs. 
+
+We have formatted our world for cars, yet have little else to make use of all that space we have given over to these machines. A Thiosphere™ is created to fill that void with a purpose and beauty that defines its bold and efficient design. It is Open Source Hardware that anyone can build and modify to their own needs.
 
 ## Introduction
 
-One thiosphere is made from the fewest number of parts possible, yet resulting in a strong, light and roomy, modular space that only take up 1/2 of a parking spot. It is flat packable and can be assembled with common tools. It is a modular so you can create a endless number of spaces, from a simple shelter to a complex office. It is both functional and beautiful, and designed to be a second place for life to flourish - whatever, and wherever those requirments are.
+One thiosphere is made from the fewest number of parts possible, yet resulting in a strong, light and roomy, modular space that only takes up 1/2 of a parking spot. It is flat packable and can be assembled with common tools. It is modular so you can create an endless number of spaces, from a simple shelter to a complex office. It is both functional and beautiful, and designed to be a second place for life to flourish - whatever, and wherever those requirements are.
 
 ![Thiosphere Basics](_media/football.png)
 ![Thiosphere Basics](_media/basics.png)
 ![Thiosphere Flattened View](_media/flatten.png)
 
+### Open Source Hardware License
 
-### Open Source Spaces
 Understanding Our Open Hardware License
 The CERN Open Hardware License (Version 2 - Strongly Reciprocal) ensures that:
 
@@ -20,11 +38,7 @@ The CERN Open Hardware License (Version 2 - Strongly Reciprocal) ensures that:
 - Original creators must be credited
 - Documentation must be provided for all changes
 
-
 ![Thiosphere Scale](_media/module.png)
-
-
-
 ![Thiosphere Scale](_media/scale.png)
 
 ## The Advantages
@@ -39,6 +53,20 @@ The CERN Open Hardware License (Version 2 - Strongly Reciprocal) ensures that:
 
 > The number two in Greek is written as "δύο" and pronounced with a soft "th" sound (thío), rather than the hard "d" one might expect. This "thio" prefix perfectly describes the dual-sphere design of the Thiosphere™, a second place for life.
 
+## Quick Start
+
+### 📋 Prerequisites
+
+- Basic woodworking skills
+- Access to standard tools (see Construction Guide)
+- Understanding of the CERN Open Hardware License
+
+### 🛠️ Getting Started
+
+1. **Review Documentation**: Start with the [Design Document](thiosphere-design-document.md)
+2. **Check Materials**: Review the [Bill of Materials](Bill_of_Materials_v.0.1.csv)
+3. **Understand License**: Read the [CERN Open Hardware License](LICENSE.md)
+4. **Start Building**: Follow the Construction Guide below
 
 ## Construction Guide
 
@@ -144,12 +172,10 @@ Outer Dome (8' diameter):
 - Pentagon diameter: 23.88"
 - Hexagon diameter: 35.18"
 
-
 Inner Dome (7.5' diameter):
 - Edge length: 19.38"
 - Pentagon diameter: 32.98"
 - Hexagon diameter: 22.38"
-
 
 Key Angles:
 - Hex to hex: 20.91°
@@ -158,4 +184,67 @@ Key Angles:
 - Penta joins: 36°
 - 2x4 rip angle: 19.8°
 
-Thoispheres - Domus Opus Est, (the work of creating space is never ending).
+## 📁 Project Structure
+
+```
+Thiosphere-Open-Source-Repo/
+├── README.md                    # This file (English)
+├── README.de.md                 # German documentation
+├── README.es.md                 # Spanish documentation
+├── README.fr.md                 # French documentation
+├── README.sv.md                 # Swedish documentation
+├── README.fi.md                 # Finnish documentation
+├── LICENSE.md                   # CERN Open Hardware License v2
+├── thiosphere-design-document.md # Complete design documentation
+├── Bill_of_Materials_v.0.1.csv  # Materials list
+├── src/                         # Source files
+│   ├── thiosphere_0.01.step     # CAD model (STEP format)
+│   └── thiosphere-fine.stl      # 3D model (STL format)
+├── _media/                      # Images and media
+└── docs/                        # Additional documentation
+```
+
+## 🤝 Contributing
+
+We welcome contributions to the Thiosphere project! Please read our contributing guidelines:
+
+1. **Fork the repository**
+2. **Create a feature branch** (`git checkout -b feature/amazing-feature`)
+3. **Commit your changes** (`git commit -m 'Add some amazing feature'`)
+4. **Push to the branch** (`git push origin feature/amazing-feature`)
+5. **Open a Pull Request**
+
+### Contribution Guidelines
+
+- Follow the CERN Open Hardware License v2 requirements
+- Document all modifications thoroughly
+- Include updated Bill of Materials if changes affect materials
+- Test your modifications before submitting
+- Provide clear documentation for any new features
+
+## 📄 License
+
+This project is licensed under the **CERN Open Hardware License Version 2 - Strongly Reciprocal**. See the [LICENSE.md](LICENSE.md) file for details.
+
+## 🔗 Links
+
+- **Website**: [https://thiosphere.org](https://thiosphere.org)
+- **Design Document**: [thiosphere-design-document.md](thiosphere-design-document.md)
+- **Bill of Materials**: [Bill_of_Materials_v.0.1.csv](Bill_of_Materials_v.0.1.csv)
+- **CAD Models**: [src/](src/)
+
+## 🙏 Acknowledgments
+
+- CERN for the Open Hardware License
+- The open source hardware community
+- All contributors and builders who have helped develop the Thiosphere
+
+---
+
+**Thiospheres - Domus Opus Est** (the work of creating space is never ending).
+
+*"We have formatted our world for cars, yet have little else to make use of all that space we have given over to these machines."*
+
+---
+
+*This project is created and sponsored by [thios.co](https://thios.co)*

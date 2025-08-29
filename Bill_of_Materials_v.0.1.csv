@@ -1,1 +1,12 @@
-
+Item,Quantity,Description,Part Number,Supplier,Unit Cost,Total Cost,Notes
+2x4 Lumber,180,Pine or SPF 2x4x8ft boards,2X4X8,Local lumber yard,$3.50,$630.00,Standard dimensional lumber
+Plywood,4,4'x8' 1/2" CDX plywood,CDX-4X8,Local lumber yard,$25.00,$100.00,Exterior grade
+Wood Screws,800,GRK FIN/Trim #8x2",GRK-8X2,GRK Fasteners,$0.15,$120.00,Trim head screws
+Nuts and Bolts,120,1/4"-20x1" hex bolts with nuts,1/4-20X1,McMaster-Carr,$0.50,$60.00,Stainless steel
+Silicone Caulk,2,Tubes of exterior silicone sealant,SI-EXTERIOR,Local hardware store,$8.00,$16.00,Weatherproof sealant
+Paint,1,Gallon exterior paint,EXT-PAINT,Local hardware store,$35.00,$35.00,Exterior grade
+Casters (Optional),4,Heavy duty swivel casters,CASTER-4",McMaster-Carr,$15.00,$60.00,For mobility
+Trailer (Optional),1,Small utility trailer,TRAILER-4X6,Local dealer,$500.00,$500.00,For transport
+Leveling Plinth (Optional),1,Adjustable leveling base,PLINTH-ADJ,Local hardware store,$75.00,$75.00,For stability
+Safety Equipment,1,Glasses, hearing protection, gloves,SAFETY-KIT,Local hardware store,$25.00,$25.00,Required for construction
+Total,,,,"$1,621.00",,,

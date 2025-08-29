@@ -1,0 +1,212 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Check for required files
+      run: |
+        echo "Checking for required project files..."
+        
+        # Check for essential documentation
+        if [ ! -f "README.md" ]; then
+          echo "❌ README.md is missing"
+          exit 1
+        fi
+        
+        if [ ! -f "LICENSE.md" ]; then
+          echo "❌ LICENSE.md is missing"
+          exit 1
+        fi
+        
+        if [ ! -f "CONTRIBUTING.md" ]; then
+          echo "❌ CONTRIBUTING.md is missing"
+          exit 1
+        fi
+        
+        if [ ! -f "CODE_OF_CONDUCT.md" ]; then
+          echo "❌ CODE_OF_CONDUCT.md is missing"
+          exit 1
+        fi
+        
+        if [ ! -f "CHANGELOG.md" ]; then
+          echo "❌ CHANGELOG.md is missing"
+          exit 1
+        fi
+        
+        if [ ! -f "SECURITY.md" ]; then
+          echo "❌ SECURITY.md is missing"
+          exit 1
+        fi
+        
+        if [ ! -f "Bill_of_Materials_v.0.1.csv" ]; then
+          echo "❌ Bill_of_Materials_v.0.1.csv is missing"
+          exit 1
+        fi
+        
+        echo "✅ All required documentation files present"
+    
+    - name: Check multilingual README files
+      run: |
+        echo "Checking multilingual README files..."
+        
+        # Check for all language versions
+        languages=("de" "es" "fr" "sv" "fi")
+        
+        for lang in "${languages[@]}"; do
+          if [ ! -f "README.${lang}.md" ]; then
+            echo "❌ README.${lang}.md is missing"
+            exit 1
+          fi
+        done
+        
+        echo "✅ All multilingual README files present"
+    
+    - name: Check CAD files
+      run: |
+        echo "Checking CAD files..."
+        
+        if [ ! -f "src/thiosphere_0.01.step" ]; then
+          echo "❌ STEP file is missing"
+          exit 1
+        fi
+        
+        if [ ! -f "src/thiosphere-fine.stl" ]; then
+          echo "❌ STL file is missing"
+          exit 1
+        fi
+        
+        echo "✅ All CAD files present"
+    
+    - name: Check media files
+      run: |
+        echo "Checking media files..."
+        
+        media_files=("football.png" "basics.png" "flatten.png" "module.png" "scale.png")
+        
+        for file in "${media_files[@]}"; do
+          if [ ! -f "_media/${file}" ]; then
+            echo "❌ Media file _media/${file} is missing"
+            exit 1
+          fi
+        done
+        
+        echo "✅ All media files present"
+    
+    - name: Validate CSV format
+      run: |
+        echo "Validating Bill of Materials CSV format..."
+        
+        # Check if CSV has required columns
+        if ! head -1 Bill_of_Materials_v.0.1.csv | grep -q "Item,Quantity,Description"; then
+          echo "❌ Bill of Materials CSV missing required columns"
+          exit 1
+        fi
+        
+        echo "✅ Bill of Materials CSV format is valid"
+    
+    - name: Check markdown links
+      run: |
+        echo "Checking markdown links..."
+        
+        # Install markdown-link-check if not available
+        if ! command -v markdown-link-check &> /dev/null; then
+          npm install -g markdown-link-check
+        fi
+        
+        # Check main README links
+        markdown-link-check README.md || echo "⚠️ Some links in README.md may be broken"
+        
+        echo "✅ Markdown link check completed"
+    
+    - name: Validate file sizes
+      run: |
+        echo "Checking file sizes..."
+        
+        # Check if CAD files are reasonable size (not empty)
+        if [ ! -s "src/thiosphere_0.01.step" ]; then
+          echo "❌ STEP file is empty"
+          exit 1
+        fi
+        
+        if [ ! -s "src/thiosphere-fine.stl" ]; then
+          echo "❌ STL file is empty"
+          exit 1
+        fi
+        
+        echo "✅ File size validation passed"
+    
+    - name: Check for sensitive information
+      run: |
+        echo "Checking for sensitive information..."
+        
+        # Check for common sensitive patterns
+        if grep -r -i "password\|secret\|key\|token" . --exclude-dir=.git --exclude="*.md" --exclude="*.csv"; then
+          echo "⚠️ Potential sensitive information found"
+          exit 1
+        fi
+        
+        echo "✅ No sensitive information detected"
+
+  documentation:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Check documentation completeness
+      run: |
+        echo "Checking documentation completeness..."
+        
+        # Check if design document exists
+        if [ ! -f "thiosphere-design-document.md" ]; then
+          echo "❌ Design document is missing"
+          exit 1
+        fi
+        
+        # Check if design document has content
+        if [ ! -s "thiosphere-design-document.md" ]; then
+          echo "❌ Design document is empty"
+          exit 1
+        fi
+        
+        echo "✅ Documentation completeness check passed"
+    
+    - name: Validate license compliance
+      run: |
+        echo "Checking license compliance..."
+        
+        # Check if CERN license is mentioned
+        if ! grep -i "cern" LICENSE.md; then
+          echo "❌ CERN license not found in LICENSE.md"
+          exit 1
+        fi
+        
+        echo "✅ License compliance check passed"
+
+  security:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Check for security issues
+      run: |
+        echo "Running security checks..."
+        
+        # Check for common security issues in markdown files
+        if grep -r -i "password\|secret\|key\|token" *.md; then
+          echo "❌ Potential security issue: sensitive information in documentation"
+          exit 1
+        fi
+        
+        echo "✅ Security checks passed"
