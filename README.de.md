@@ -4,14 +4,7 @@
 [![Open Source Hardware](https://img.shields.io/badge/Open%20Source-Hardware-green.svg)](https://www.oshwa.org/)
 [![Documentation](https://img.shields.io/badge/Documentation-Complete-brightgreen.svg)](docs/)
 
-## 🌍 Sprachauswahl / Language Selection / Selección de Idioma / Sélection de Langue / Språkval / Kielen Valinta
-
-- [🇺🇸 English](README.md)
-- [🇩🇪 Deutsch](README.de.md)
-- [🇪🇸 Español](README.es.md)
-- [🇫🇷 Français](README.fr.md)
-- [🇸🇪 Svenska](README.sv.md)
-- [🇫🇮 Suomi](README.fi.md)
+[🇺🇸 English](README.md) | [🇩🇪 Deutsch](README.de.md) | [🇪🇸 Español](README.es.md) | [🇫🇷 Français](README.fr.md) | [🇸🇪 Svenska](README.sv.md) | [🇫🇮 Suomi](README.fi.md)
 
 ---
 
