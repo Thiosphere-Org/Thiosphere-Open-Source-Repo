@@ -66,7 +66,7 @@ The CERN Open Hardware License (Version 2 - Strongly Reciprocal) ensures that:
 ### What You'll Need
 
 **Materials:**
-- 180 - 2x4's
+- 200 - 2x4's
 - 4 - 4'x8' sheets of plywood
 - 120 - nuts and bolts
 - 800 - wood screws
