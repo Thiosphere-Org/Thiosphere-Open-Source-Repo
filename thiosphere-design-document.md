@@ -112,12 +112,13 @@ The Thiosphere operates under the **CERN Open Hardware License Version 2 \- Stro
 * **Documentation Standards**: All changes must be documented
 
 ### **Repository Structure**
++ Thiosphere-Open_Source_Repo
+  + src
+    + thiosphere-fine.stl
+    + thiosphere_0.01.step
+    + README.md
 
-src/
-── README.md
-── thiosphere-fine.stl
-── thiosphere_0.01.step
-
+[OnShape Source File]([https://discord.gg/39JH75tCJc](https://cad.onshape.com/documents/a878d2b40f5c2b06e447b850/w/9c1436707bee601b6c35ed67/e/62332e1507ac6da20a1d5b81?renderMode=0&uiState=68f15fe918a63fc1e6f5116e))  
 
 ### **Community Engagement**
 
