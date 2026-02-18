@@ -113,11 +113,10 @@ The Thiosphere operates under the **CERN Open Hardware License Version 2 \- Stro
 
 ### **Repository Structure**
 
-Thiosphere Repo Source CAD files/
-├── src/
-│ ├── README.md/
-│ ├── thiosphere-fine.stl/
-│ └── thiosphere_0.01.step/
+src/
+── README.md
+── thiosphere-fine.stl
+── thiosphere_0.01.step
 
 
 ### **Community Engagement**
