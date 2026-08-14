@@ -85,8 +85,8 @@ CERN Open Hardware License (Version 2 - Starkt Reciprok) säkerställer att:
 #### 1. Förbered Träet
 
 **Skär 2x4 till längd:**
-- **Yttre kupol**: 20,67" kantbitar
-- **Inre kupol**: 19,38" kantbitar
+- **Yttre kupol**: 20" kantbitar
+- **Inre kupol**: 18,75" kantbitar
 
 **Skär 2x4 för kantbitar:**
 - Ställ in bordsåg till 19,8° fasvinkel
@@ -95,15 +95,15 @@ CERN Open Hardware License (Version 2 - Starkt Reciprok) säkerställer att:
 
 #### 2. Skär Dessa Vinklar
 
-**För Yttre Kupol (8' diameter):**
+**För Yttre Kupol (8,26' diameter):**
 - **Hexagon till hexagon-fogar**: 20,91° sammansatt vinkel
 - **Hexagon till pentagon-fogar**: 18,69° sammansatt vinkel
 - **Hexagon-fogar**: 30° vinkel
 - **Pentagon-fogar**: 36° vinkel
 
-**För Inre Kupol (7,5' diameter):**
+**För Inre Kupol (7,74' diameter):**
 - Samma vinklar som yttre kupol
-- Alla bitar är kortare (19,38" vs 20,67")
+- Alla bitar är kortare (18,75" vs 20")
 
 #### 3. Sätt Ihop Det
 
@@ -160,15 +160,15 @@ CERN Open Hardware License (Version 2 - Starkt Reciprok) säkerställer att:
 
 ### Snabbreferens
 
-Yttre Kupol (8' diameter):
-- Kantlängd: 20,67"
-- Pentagon-diameter: 23,88"
-- Hexagon-diameter: 35,18"
+Yttre Kupol (8,26' diameter):
+- Kantlängd: 20"
+- Pentagon-diameter: 34,03"
+- Hexagon-diameter: 40,00"
 
-Inre Kupol (7,5' diameter):
-- Kantlängd: 19,38"
-- Pentagon-diameter: 32,98"
-- Hexagon-diameter: 22,38"
+Inre Kupol (7,74' diameter):
+- Kantlängd: 18,75"
+- Pentagon-diameter: 31,90"
+- Hexagon-diameter: 37,50"
 
 Viktiga Vinklar:
 - Hex till hex: 20,91°

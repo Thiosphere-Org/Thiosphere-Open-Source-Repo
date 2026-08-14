@@ -85,8 +85,8 @@ Die CERN Open Hardware License (Version 2 - Strongly Reciprocal) stellt sicher, 
 #### 1. Holz vorbereiten
 
 **2x4 Bretter auf Länge schneiden:**
-- **Äußere Kuppel**: 20,67" Kantenstücke
-- **Innere Kuppel**: 19,38" Kantenstücke
+- **Äußere Kuppel**: 20" Kantenstücke
+- **Innere Kuppel**: 18,75" Kantenstücke
 
 **2x4 Bretter für Kantenstücke sägen:**
 - Tischsäge auf 19,8° Schrägwinkel einstellen
@@ -95,15 +95,15 @@ Die CERN Open Hardware License (Version 2 - Strongly Reciprocal) stellt sicher, 
 
 #### 2. Winkel schneiden
 
-**Für äußere Kuppel (8' Durchmesser):**
+**Für äußere Kuppel (8,26' Durchmesser):**
 - **Sechseck zu Sechseck Verbindungen**: 20,91° Verbundwinkel
 - **Sechseck zu Fünfeck Verbindungen**: 18,69° Verbundwinkel
 - **Sechseck Verbindungen**: 30° Winkel
 - **Fünfeck Verbindungen**: 36° Winkel
 
-**Für innere Kuppel (7,5' Durchmesser):**
+**Für innere Kuppel (7,74' Durchmesser):**
 - Gleiche Winkel wie äußere Kuppel
-- Alle Stücke sind kürzer (19,38" vs 20,67")
+- Alle Stücke sind kürzer (18,75" vs 20")
 
 #### 3. Zusammenbauen
 
@@ -160,15 +160,15 @@ Die CERN Open Hardware License (Version 2 - Strongly Reciprocal) stellt sicher, 
 
 ### Schnellreferenz
 
-Äußere Kuppel (8' Durchmesser):
-- Kantenlänge: 20,67"
-- Fünfeck-Durchmesser: 23,88"
-- Sechseck-Durchmesser: 35,18"
+Äußere Kuppel (8,26' Durchmesser):
+- Kantenlänge: 20"
+- Fünfeck-Durchmesser: 34,03"
+- Sechseck-Durchmesser: 40,00"
 
-Innere Kuppel (7,5' Durchmesser):
-- Kantenlänge: 19,38"
-- Fünfeck-Durchmesser: 32,98"
-- Sechseck-Durchmesser: 22,38"
+Innere Kuppel (7,74' Durchmesser):
+- Kantenlänge: 18,75"
+- Fünfeck-Durchmesser: 31,90"
+- Sechseck-Durchmesser: 37,50"
 
 Wichtige Winkel:
 - Sechseck zu Sechseck: 20,91°

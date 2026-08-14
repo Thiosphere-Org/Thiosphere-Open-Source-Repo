@@ -85,8 +85,8 @@ La Licencia de Hardware Abierto de CERN (Versión 2 - Fuerte Recíproca) asegura
 #### 1. Preparar la Madera
 
 **Cortar 2x4s a medida:**
-- **Cúpula exterior**: piezas de borde de 20.67"
-- **Cúpula interior**: piezas de borde de 19.38"
+- **Cúpula exterior**: piezas de borde de 20"
+- **Cúpula interior**: piezas de borde de 18.75"
 
 **Cortar 2x4s para piezas de borde:**
 - Ajustar sierra de mesa a ángulo de bisel de 19.8°
@@ -95,15 +95,15 @@ La Licencia de Hardware Abierto de CERN (Versión 2 - Fuerte Recíproca) asegura
 
 #### 2. Cortar Esos Ángulos
 
-**Para Cúpula Exterior (8' diámetro):**
+**Para Cúpula Exterior (8.26' diámetro):**
 - **Juntas hexágono a hexágono**: ángulo compuesto de 20.91°
 - **Juntas hexágono a pentágono**: ángulo compuesto de 18.69°
 - **Juntas hexágono**: ángulo de 30°
 - **Juntas pentágono**: ángulo de 36°
 
-**Para Cúpula Interior (7.5' diámetro):**
+**Para Cúpula Interior (7.74' diámetro):**
 - Mismos ángulos que cúpula exterior
-- Todas las piezas son más cortas (19.38" vs 20.67")
+- Todas las piezas son más cortas (18.75" vs 20")
 
 #### 3. Ensamblarlo
 
@@ -160,15 +160,15 @@ La Licencia de Hardware Abierto de CERN (Versión 2 - Fuerte Recíproca) asegura
 
 ### Referencia Rápida
 
-Cúpula Exterior (8' diámetro):
-- Longitud de borde: 20.67"
-- Diámetro pentágono: 23.88"
-- Diámetro hexágono: 35.18"
+Cúpula Exterior (8.26' diámetro):
+- Longitud de borde: 20"
+- Diámetro pentágono: 34.03"
+- Diámetro hexágono: 40.00"
 
-Cúpula Interior (7.5' diámetro):
-- Longitud de borde: 19.38"
-- Diámetro pentágono: 32.98"
-- Diámetro hexágono: 22.38"
+Cúpula Interior (7.74' diámetro):
+- Longitud de borde: 18.75"
+- Diámetro pentágono: 31.90"
+- Diámetro hexágono: 37.50"
 
 Ángulos Clave:
 - Hex a hex: 20.91°
