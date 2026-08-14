@@ -85,8 +85,8 @@ La Licence Hardware Open Source de CERN (Version 2 - Fortement Réciproque) assu
 #### 1. Préparer le Bois
 
 **Couper les 2x4 à longueur :**
-- **Dôme extérieur** : pièces de bord de 20,67"
-- **Dôme intérieur** : pièces de bord de 19,38"
+- **Dôme extérieur** : pièces de bord de 20"
+- **Dôme intérieur** : pièces de bord de 18,75"
 
 **Dégauchir les 2x4 pour les pièces de bord :**
 - Régler la scie à table à un angle de biseau de 19,8°
@@ -95,15 +95,15 @@ La Licence Hardware Open Source de CERN (Version 2 - Fortement Réciproque) assu
 
 #### 2. Couper Ces Angles
 
-**Pour Dôme Extérieur (8' diamètre) :**
+**Pour Dôme Extérieur (8,26' diamètre) :**
 - **Joints hexagone à hexagone** : angle composé de 20,91°
 - **Joints hexagone à pentagone** : angle composé de 18,69°
 - **Joints hexagone** : angle de 30°
 - **Joints pentagone** : angle de 36°
 
-**Pour Dôme Intérieur (7,5' diamètre) :**
+**Pour Dôme Intérieur (7,74' diamètre) :**
 - Mêmes angles que le dôme extérieur
-- Toutes les pièces sont plus courtes (19,38" vs 20,67")
+- Toutes les pièces sont plus courtes (18,75" vs 20")
 
 #### 3. L'Assembler
 
@@ -160,15 +160,15 @@ La Licence Hardware Open Source de CERN (Version 2 - Fortement Réciproque) assu
 
 ### Référence Rapide
 
-Dôme Extérieur (8' diamètre) :
-- Longueur de bord : 20,67"
-- Diamètre pentagone : 23,88"
-- Diamètre hexagone : 35,18"
+Dôme Extérieur (8,26' diamètre) :
+- Longueur de bord : 20"
+- Diamètre pentagone : 34,03"
+- Diamètre hexagone : 40,00"
 
-Dôme Intérieur (7,5' diamètre) :
-- Longueur de bord : 19,38"
-- Diamètre pentagone : 32,98"
-- Diamètre hexagone : 22,38"
+Dôme Intérieur (7,74' diamètre) :
+- Longueur de bord : 18,75"
+- Diamètre pentagone : 31,90"
+- Diamètre hexagone : 37,50"
 
 Angles Clés :
 - Hex à hex : 20,91°

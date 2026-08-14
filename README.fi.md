@@ -85,8 +85,8 @@ CERN Open Hardware License (Version 2 - Vahvasti Vastavuoroinen) varmistaa, ett�
 #### 1. Valmistele Puu
 
 **Leikkaa 2x4:t pituuteen:**
-- **Ulkokupoli**: 20,67" reunaosat
-- **Sisäkupoli**: 19,38" reunaosat
+- **Ulkokupoli**: 20" reunaosat
+- **Sisäkupoli**: 18,75" reunaosat
 
 **Viillä 2x4:t reunaosiksi:**
 - Aseta pöytäsaha 19,8° viistokulmaan
@@ -95,15 +95,15 @@ CERN Open Hardware License (Version 2 - Vahvasti Vastavuoroinen) varmistaa, ett�
 
 #### 2. Leikkaa Nuo Kulmat
 
-**Ulkokupolille (8' halkaisija):**
+**Ulkokupolille (8,26' halkaisija):**
 - **Kuusikulmio kuusikulmio -liitokset**: 20,91° yhdistelmäkulma
 - **Kuusikulmio viisikulmio -liitokset**: 18,69° yhdistelmäkulma
 - **Kuusikulmio-liitokset**: 30° kulma
 - **Viisikulmio-liitokset**: 36° kulma
 
-**Sisäkupolille (7,5' halkaisija):**
+**Sisäkupolille (7,74' halkaisija):**
 - Samat kulmat kuin ulkokupolilla
-- Kaikki osat ovat lyhyempiä (19,38" vs 20,67")
+- Kaikki osat ovat lyhyempiä (18,75" vs 20")
 
 #### 3. Koko Se
 
@@ -160,15 +160,15 @@ CERN Open Hardware License (Version 2 - Vahvasti Vastavuoroinen) varmistaa, ett�
 
 ### Nopea Viittaus
 
-Ulkokupoli (8' halkaisija):
-- Reunan pituus: 20,67"
-- Viisikulmion halkaisija: 23,88"
-- Kuusikulmion halkaisija: 35,18"
+Ulkokupoli (8,26' halkaisija):
+- Reunan pituus: 20"
+- Viisikulmion halkaisija: 34,03"
+- Kuusikulmion halkaisija: 40,00"
 
-Sisäkupoli (7,5' halkaisija):
-- Reunan pituus: 19,38"
-- Viisikulmion halkaisija: 32,98"
-- Kuusikulmion halkaisija: 22,38"
+Sisäkupoli (7,74' halkaisija):
+- Reunan pituus: 18,75"
+- Viisikulmion halkaisija: 31,90"
+- Kuusikulmion halkaisija: 37,50"
 
 Tärkeät Kulmat:
 - Kuusi kuuteen: 20,91°

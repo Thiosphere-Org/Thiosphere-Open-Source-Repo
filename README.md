@@ -85,8 +85,8 @@ The CERN Open Hardware License (Version 2 - Strongly Reciprocal) ensures that:
 #### 1. Prep Your Wood
 
 **Cut 2x4s to length:**
-- **Outer dome**: 20.67" edge pieces
-- **Inner dome**: 19.38" edge pieces
+- **Outer dome**: 20" edge pieces
+- **Inner dome**: 18.75" edge pieces
 
 **Rip 2x4s for edge pieces:**
 - Set table saw to 19.8° bevel angle
@@ -95,15 +95,15 @@ The CERN Open Hardware License (Version 2 - Strongly Reciprocal) ensures that:
 
 #### 2. Cut Those Angles
 
-**For Outer Dome (8' diameter):**
+**For Outer Dome (8.26' diameter):**
 - **Hexagon to hexagon joints**: 20.91° compound angle
 - **Hexagon to pentagon joints**: 18.69° compound angle
 - **Hexagon joins**: 30° angle
 - **Pentagon joins**: 36° angle
 
-**For Inner Dome (7.5' diameter):**
+**For Inner Dome (7.74' diameter):**
 - Same angles as outer dome
-- All pieces are shorter (19.38" vs 20.67")
+- All pieces are shorter (18.75" vs 20")
 
 #### 3. Put It Together
 
@@ -160,15 +160,15 @@ The CERN Open Hardware License (Version 2 - Strongly Reciprocal) ensures that:
 
 ### Quick Reference
 
-Outer Dome (8' diameter):
-- Edge length: 20.67"
-- Pentagon diameter: 23.88"
-- Hexagon diameter: 35.18"
+Outer Dome (8.26' diameter):
+- Edge length: 20"
+- Pentagon diameter: 34.03"
+- Hexagon diameter: 40.00"
 
-Inner Dome (7.5' diameter):
-- Edge length: 19.38"
-- Pentagon diameter: 32.98"
-- Hexagon diameter: 22.38"
+Inner Dome (7.74' diameter):
+- Edge length: 18.75"
+- Pentagon diameter: 31.90"
+- Hexagon diameter: 37.50"
 
 Key Angles:
 - Hex to hex: 20.91°
