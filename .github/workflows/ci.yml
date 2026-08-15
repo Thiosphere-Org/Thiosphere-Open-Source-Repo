@@ -149,8 +149,13 @@ jobs:
       run: |
         echo "Checking for sensitive information..."
         
-        # Check for common sensitive patterns
-        if grep -r -i "password\|secret\|key\|token" . --exclude-dir=.git --exclude="*.md" --exclude="*.csv"; then
+        # Match the SHAPE of a credential, not English words. The old
+        # bare-word grep also matched its own source in this file, so this
+        # step could never pass regardless of repository content.
+        # -I skips binaries (a .gif byte-matched the old pattern);
+        # .github is excluded so the step cannot flag itself.
+        SECRET_RE="AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{36}|-----BEGIN [A-Z ]*PRIVATE KEY-----|(api[-_]?key|secret|token|passwd|password)['\"]?[[:space:]]*[:=][[:space:]]*['\"]?[A-Za-z0-9/+_-]{16,}"
+        if grep -rIEni "$SECRET_RE" . --exclude-dir=.git --exclude-dir=.github --exclude="*.md" --exclude="*.csv"; then
           echo "⚠️ Potential sensitive information found"
           exit 1
         fi
@@ -203,8 +208,11 @@ jobs:
       run: |
         echo "Running security checks..."
         
-        # Check for common security issues in markdown files
-        if grep -r -i "password\|secret\|key\|token" *.md; then
+        # Same shape-based pattern as the validate job. "trade secret" in
+        # LICENSE.md (CERN licence text) and "Key Angles:" in README.md are
+        # documentation, not leaks -- matching bare words kept this red.
+        SECRET_RE="AKIA[0-9A-Z]{16}|gh[pousr]_[A-Za-z0-9]{36}|-----BEGIN [A-Z ]*PRIVATE KEY-----|(api[-_]?key|secret|token|passwd|password)['\"]?[[:space:]]*[:=][[:space:]]*['\"]?[A-Za-z0-9/+_-]{16,}"
+        if grep -IEni "$SECRET_RE" *.md; then
           echo "❌ Potential security issue: sensitive information in documentation"
           exit 1
         fi
