@@ -1,4 +1,4 @@
-# Thiosphere - Modulaariset Open Source -tilat
+# Thiosphere - Modulaariset Open Source -suojat
 
 [![CERN Open Hardware License v2](https://img.shields.io/badge/License-CERN%20OHL%20v2%20Strongly%20Reciprocal-blue.svg)](LICENSE.md)
 [![Open Source Hardware](https://img.shields.io/badge/Open%20Source-Hardware-green.svg)](https://www.oshwa.org/)
@@ -8,13 +8,13 @@
 
 ---
 
-# Modulaariset Open Source -tilat
+# Modulaariset Open Source -suojat
 
 Olemme muotoilleet maailmamme autoille, mutta meillä on vähän muuta käyttää kaikille niille tiloille, jotka olemme antaneet näille koneille. Thiosphere™ luodaan täyttämään tuo tyhjiö tarkoituksella ja kauneudella, jotka määrittelevät sen rohkean ja tehokkaan suunnittelun. Se on Open Source -laitteisto, jota kuka tahansa voi rakentaa ja muokata omiin tarpeisiinsa.
 
 ## Johdanto
 
-Yksi thiosphere on valmistettu mahdollisimman vähästä osista, mutta tuloksena on vahva, kevyt ja tilava modulaarinen tila, joka vie vain 1/2 pysäköintipaikasta. Se on litteä pakattavissa ja voidaan koota yleisillä työkaluilla. Se on modulaarinen, joten voit luoda loputtoman määrän tiloja, yksinkertaisesta suojasta monimutkaiseen toimistoon. Se on sekä toiminnallinen että kaunis, ja suunniteltu olemaan toinen paikka, jossa elämä voi kukoistaa - mitä tahansa ja missä tahansa nuo vaatimukset ovat.
+Yksi thiosphere on valmistettu mahdollisimman vähästä osista, mutta tuloksena on vahva, kevyt ja tilava modulaarinen suoja, joka vie vain 1/2 pysäköintipaikasta. Se on litteä pakattavissa ja voidaan koota yleisillä työkaluilla. Se on modulaarinen, joten voit luoda loputtoman määrän rakennelmia, yksinkertaisesta suojasta monimutkaiseen toimistoon. Se on sekä toiminnallinen että kaunis, ja suunniteltu olemaan toinen paikka, jossa elämä voi kukoistaa - mitä tahansa ja missä tahansa nuo vaatimukset ovat.
 
 ![Thiosphere Perusteet](_media/football.png)
 ![Thiosphere Perusteet](_media/basics.png)
@@ -40,7 +40,6 @@ CERN Open Hardware License (Version 2 - Vahvasti Vastavuoroinen) varmistaa, ett�
 - **Pysyy Viileänä**: Luonnollinen konvektio pitää ympäristön sisällä vakaina
 - **Sopii Täydellisesti**: Suunniteltu olemassa oleville pysäköintipaikoille - ei tarvita muutoksia
 - **Helppo Rakentaa**: Yksinkertainen geometria tarkoittaa, että voit tehdä sen paikallisesti perustyökaluilla
-- **Energiaviisas**: Passiivinen suunnittelu vähentää energiantarvetta 80%
 
 ## Mikä on Thios?
 
@@ -63,119 +62,177 @@ CERN Open Hardware License (Version 2 - Vahvasti Vastavuoroinen) varmistaa, ett�
 
 ## Rakennusopas
 
+> **Mistä luvut tulevat.** Kaikki alla olevat arvot on mitattu lopullisesta Onshape-mallista
+> *Thiosphere for prints* arvolla `#maxWidth` = 93,700 in (tarkistettu 2026-09-12). Jos vanhempi
+> [suunnitteludokumentti](thiosphere-design-document.md) tai
+> [materiaaliluettelo v0.1](Bill_of_Materials_v.0.1.csv) poikkeaa, tämä opas on oikea.
+
+### Lyhyesti
+
+| | |
+|---|---|
+| Ulkohalkaisija | **93,700 in** (7 ft 9,7 in) |
+| Särmän pituus, ulkokuori | **18,906 in** |
+| Särmän pituus, sisäkuori | **16,701 in** |
+| Seinän paksuus | **5,0 in** — ¼ levy + 1½ rima + 1½ kappale + 1½ rima + ¼ levy |
+| Vapaa korkeus valmiin lattian yläpuolella, harjalla | **79,829 in** |
+| Lattiataso | 12-kulmainen, 88,543 × 91,773 in |
+| Moduulit | **23** |
+
+Muoto on katkaistu ikosaedri (32 tahkoa: 20 kuusikulmiota, 12 viisikulmiota). Se lepää
+särmän, ei tahkon, varassa.
+
+### 23 Moduulia
+
+Vain ne 22 tahkoa, jotka ovat alemman kuusikulmiorenkaan korkeudella tai sen yläpuolella, ovat paneeleja.
+Alapuolen 10 tahkoa ei rakenneta: tyypit B, C ja E jatkuvat lattiatasoon asti ja korvaavat ne.
+
+| Tyyppi | Moduuli | Määrä | Miten se tehdään |
+|---|---|---:|---|
+| A | Tavallinen kuusikulmio | 8 | Säännöllinen kuusikulmio |
+| B | Ovi | 4 | Kuusikulmio, kaksi pystysivua jatkettu lattiatasoon |
+| C | Sivuseinä | 2 | Kuusikulmio, kaksi vinoa sivua jatkettu lattiatasoon |
+| D | Tavallinen viisikulmio | 4 | Säännöllinen viisikulmio |
+| E | Kulmaleija | 4 | Viisikulmio, kaksi sivua jatkettu, kunnes ne kohtaavat |
+| FL | Lattiataso | 1 | 12-kulmainen, kaksi ¾ in vanerilevyä |
+| | **Yhteensä** | **23** | |
+
 ### Mitä Tarvitset
 
 **Materiaalit:**
-- 180 - 2x4 lautaa
-- 4 - 4'x8' vanerilevyä
-- 120 - muttereita ja pultteja
-- 800 - puuruuveja
-- 4 pyörää, pieni traileri tai tasauspohja (valinnainen)
+- **36** × 2×4-runkopuuta, 96 in pitkiä — jokainen halkaistaan keskeltä (sisältää 8,5% sahausrakoa ja hukkapaloja varten)
+- **16** × 4×8-levyä ¼ in vaneria — ulko- ja sisäverhous, 35% sijoittelun hukkaa varten
+- **2** × 4×8-levyä ¾ in vaneria — lattiataso
+- Ruuvit, pultit sekä pyörät, peräkärry tai tasausalusta — määriä lasketaan uudelleen nykyiselle mallille, eikä niitä ilmoiteta ennen tarkistusta
 
 **Työkalut:**
-- Yhdistelmäviistosaha
-- Pöytäsaha tai pyörösaha
-- Porakone/ruuvimeisseli
-- Mittanauha
-- Kynä
-- Turvavarusteet (lasit, kuulosuoja)
+- Pöytäsirkkeli kallistettavalla terällä (viiste sahataan halkaisussa)
+- Katkaisu- ja jiirisaha
+- Porakone/ruuvinväännin
+- Mittanauha ja kynä
+- Suojavarusteet (lasit, kuulosuojaimet)
 
-### Vaiheittainen Rakentaminen
+### Rakentaminen Vaihe Vaiheelta
 
-#### 1. Valmistele Puu
+#### 1. Lajittele Puutavara, Halkaise Sitten
 
-**Leikkaa 2x4:t pituuteen:**
-- **Ulkokupoli**: 20" reunaosat
-- **Sisäkupoli**: 18,75" reunaosat
+**Viistekulmia on kaksi, ei yksi.**
 
-**Viillä 2x4:t reunaosiksi:**
-- Aseta pöytäsaha 19,8° viistokulmaan
-- Viillä 2x4:t luodaksesi kulmikkaat reunaosat
-- Tarvitset noin 60 kappaletta ulkokupolia, 60 sisäkupolia
+| Rima on välissä | Viiste |
+|---|---:|
+| Kuusikulmio ↔ kuusikulmio | **20,905°** |
+| Kuusikulmio ↔ viisikulmio | **18,689°** |
 
-#### 2. Leikkaa Nuo Kulmat
+- Jokainen 2×4 halkaistaan keskeltä terä viistekulmaan kallistettuna. Yksi sahaus tekee viisteen ja kaksi rimaa.
+- ⅛ in sahausraolla kumpikin puolikas on 1,6875 in leveä.
+- Viiste määräytyy halkaisussa, eikä puolikasta voi halkaista uudelleen. **Päätä ennen halkaisua, mitä viistettä kunkin runkopuun rimat tarvitsevat.**
+- Kuusikulmiomoduuli tarvitsee **molemmat** viisteet: sen särmien naapurit vuorottelevat kuusikulmion ja viisikulmion välillä. Viisikulmiomoduulin kaikissa viidessä särmässä on 18,689°.
 
-**Ulkokupolille (8,26' halkaisija):**
-- **Kuusikulmio kuusikulmio -liitokset**: 20,91° yhdistelmäkulma
-- **Kuusikulmio viisikulmio -liitokset**: 18,69° yhdistelmäkulma
-- **Kuusikulmio-liitokset**: 30° kulma
-- **Viisikulmio-liitokset**: 36° kulma
+> ⚠️ **Älä käytä yhtä noin 19,8°:n keskiarvoviistettä.** Se avaa jokaiseen liitokseen noin 5⁄64 in
+> raon, ja raot kasautuvat jokaisessa kulmassa, jossa kolme rimaa kohtaa.
 
-**Sisäkupolille (7,74' halkaisija):**
-- Samat kulmat kuin ulkokupolilla
-- Kaikki osat ovat lyhyempiä (18,75" vs 20")
+#### 2. Katkaise Rimat Mittaan
 
-#### 3. Koko Se
+**Jiirit:** 30° kuusikulmion kulmissa, 36° viisikulmion kulmissa, 36° leijan kärjessä.
 
-**Aloita pohjarenkaalla:**
-1. Aseta ensimmäinen rengas osia tasaiselle pinnalle
-2. Liitä osat käyttäen laskettuja kulmia
-3. Käytä GRK-ruuveja liitosten varmistamiseen
-4. Tarkista pyöreys ja säädä tarvittaessa
+**Pituudet** (kärjestä kärkeen):
 
-**Rakenna ylöspäin renkaina:**
-1. Jokainen rengas liittyy alla olevaan
-2. Pidä tasainen väli sisä- ja ulkokupolien välillä
-3. Käytä väliaikaisia tukeja pitämään osat paikallaan
-4. Työskentele osissa pitämään se vakaana
+| Rima | Ulkokuori | Sisäkuori |
+|---|---:|---:|
+| Tavalliset särmät — tyypit A ja D sekä B:n, C:n ja E:n jatkamattomat särmät | 18,906 in | 16,701 in |
+| B · ovi, pystysivu | 49,497 in | 49,056 in |
+| B · ovi, kynnys | 32,747 in | 31,218 in |
+| C · sivuseinä, vino sivu | 49,497 in | 49,497 in |
+| C · sivuseinä, kynnys | 68,403 in | 67,521 in |
+| E · kulmaleija, jatkettu sivu | 49,497 in | 43,724 in |
 
-#### 4. Lisää Paneelit
+**Älä tee sisäkuorta skaalaamalla ulkokuorta.** Jatketut sivut päättyvät lattiatasoon, eikä
+lattiataso liiku, joten ne lyhenevät vähemmän kuin tavalliset särmät tai eivät lainkaan. Siksi
+sisäkuoressa on kuusi rimapituutta ja ulkokuoressa neljä.
 
-**Leikkaa vaneripaneelit:**
-- Mittaa jokainen aukko kehysosien välillä
-- Leikkaa paneelit sopimaan 1/4" raolla laajenemista varten
-- Hio reunat sileiksi
+**Rimaa yhteensä:** ulkokuori 112 rimaa (240,3 ft), sisäkuori 112 rimaa (218,3 ft),
+kappaleet 224 kpl (63,2 ft) — **521,8 jalkaa**.
 
-**Asenna paneelit:**
-1. Levitä silikonitiivistettä kehysreunoihin
-2. Paina paneelit paikoilleen
-3. Varmista ruuveilla ympäri kehän
-4. Pyyhi ylimääräinen tiiviste
+**Ryhmittele sahaukset viisteen mukaan kaikkien moduulien yli**, älä moduuli kerrallaan.
 
-#### 5. Vesitiivistä Se
+#### 3. Rakenna Moduulien Kehykset
 
-**Tiivistä kaikki liitokset:**
-- Levitä silikonitiivistettä kaikkiin ulkoliitoksiin
-- Kiinnitä erityistä huomiota paneelireunoihin
-- Anna kuivua 24 tuntia
+1. Rakenna jokainen kehys tasaisella alustalla
+2. Liitä rimat jiireistä ja tarkista jokainen kulma
+3. Kiinnitä liitokset GRK-ruuveilla
+4. Yhdistä ulko- ja sisärimat kappalekerroksella. Se muodostaa 5,0 in seinän
+5. Sovita viereiset moduulit kuivana ennen kiinnitystä
 
-**Levitä viimeistely:**
-- Maalaa tai tiivistä kaikki puupinnat
-- Käytä ulkomaalia ulkokäyttöön
-- Levitä useita kerroksia kestävyyttä varten
+#### 4. Kokoa Lattiatason Päälle
 
-### Pro-vinkit
+1. Rakenna ensin lattiataso. Se on taso, johon jokainen jatkettu sivu päättyy
+2. Nosta alemmat moduulit (B, C, E) lattiatasolle ja etene ylöspäin
+3. Tue moduulit paikalleen väliaikaisilla tuilla
+4. Työskentele osissa, jotta rakenne pysyy tukevana
 
-- **Ota aikaa**: Kulmien leikkaamisen tarkkuus on avain
-- **Koeasennus**: Kuivaasenna osat ennen lopullista kokoonpanoa
-- **Käytä mallipuikkoja**: Luo yksinkertaisia mallipuikkoja pitämään osat oikeissa kulmissa
-- **Työskentele pareittain**: Jotkut kokoonpanovaiheet ovat helpompia avun kanssa
-- **Tarkista mitat**: Vahvista jokainen osa ennen leikkaamista
+**Kulmaläpiviennit:** jokaiseen neljään sisäkulmaan jää lattian tasolle kolmion muotoinen aukko,
+4,671 in korkea × 3,394 in leveä. Se on talotekniikan läpivienti seinän onteloon (siihen mahtuu 3 in
+putki tai kaapelinippu). Sulje se irrotettavalla kannella. Älä täytä sitä.
+
+#### 5. Asenna Paneelit
+
+**Ulkoverhous — limitykset ohjaavat veden pois:**
+- Paneeli, jonka keskipiste on ylempänä, limittyy alemman päälle. **Asenna alhaalta ylöspäin.**
+- Jokainen limitys on 1,5 in, sama kuin riman paksuus, joten se lepää kokonaan alemman paneelin riman päällä ja siihen voi ruuvata.
+- **Sahaa kapillaarikatko jokaisen limittyvän reunan alapintaan:** ⅛ in leveä × ⅛ in syvä ura, 0,5 in päässä reunasta. Ilman sitä vesi nousee levyjen väliin kapillaarisesti, oli limitys kuinka pitkä tahansa.
+- Kahdeksan päiväntasaajan tahkoa ovat pystysuoria. Niiden pystysaumoihin tulee tiiviste tai peitelista, ei limitystä.
+- Harja on ainoa sauma, jolla ei ole ylempää puolta. Tiivistä se tiivisteellä.
+
+**Sisäverhous:**
+- Leikkaa sopimaan sisäkehykseen
+
+**Asennus:**
+1. Hio reunat sileiksi
+2. Levitä silikonimassaa kehyksen reunoille
+3. Paina paneelit paikalleen ja ruuvaa ne kiinni koko kehältä
+4. Pyyhi ylimääräinen massa pois
+
+#### 6. Säänsuojaa
+
+**Tiivistä kaikki saumat:**
+- Levitä silikonimassaa kaikkiin ulkosaumoihin
+- Kiinnitä erityistä huomiota paneelien reunoihin
+- Anna kovettua 24 tuntia
+
+**Viimeistele:**
+- Maalaa tai käsittele kaikki puupinnat
+- Käytä ulkomaalia ulkokäytössä
+- Levitä useita kerroksia kestävyyden vuoksi
+
+### Ammattilaisvinkit
+
+- **Ryhmittele viisteen mukaan**: lajittele puutavara ja ryhmittele sahaukset viisteen mukaan, ei koskaan moduuleittain
+- **Ota aikaa**: Kulmien tarkkuus on ratkaisevaa
+- **Sovita kuivana**: Kokoa osat kuivana ennen lopullista kokoamista
+- **Käytä jigejä**: Tee yksinkertaisia jigejä, jotka pitävät osat oikeassa kulmassa
+- **Työskentele pareittain**: Jotkin kokoamisvaiheet ovat helpompia avustajan kanssa
+- **Tarkista mitat**: Tarkista jokainen osa ennen sahausta
 
 ### Resurssit
 
-- [Yhdistelmäviistosaha-laskin](https://jansson.us/jcompound.html) - Olennainen tarkkojen kulmien laskemiseen
-- [GRK FIN/Trim™ Ruuvit](https://grkfasteners.ca/product/fin-trim-finishing-trim-head-screw/) - Suositeltu puhtaaseen viimeistelyyn
-- [McMaster-Carr Laitteisto](https://www.mcmaster.com/90273A572/) - Lisäkiinnikkeille ja laitteistolle
+- [Compound Miter Saw Calculator](https://jansson.us/jcompound.html) - Tarkkojen kulmien laskemiseen
+- [GRK FIN/Trim™ -ruuvit](https://grkfasteners.ca/product/fin-trim-finishing-trim-head-screw/) - Suositellaan siistiin lopputulokseen
+- [McMaster-Carr Hardware](https://www.mcmaster.com/90273A572/) - Lisäkiinnikkeisiin
 
-### Nopea Viittaus
+### Pikaopas
 
-Ulkokupoli (8,26' halkaisija):
-- Reunan pituus: 20"
-- Viisikulmion halkaisija: 34,03"
-- Kuusikulmion halkaisija: 40,00"
-
-Sisäkupoli (7,74' halkaisija):
-- Reunan pituus: 18,75"
-- Viisikulmion halkaisija: 31,90"
-- Kuusikulmion halkaisija: 37,50"
-
-Tärkeät Kulmat:
-- Kuusi kuuteen: 20,91°
-- Kuusi viiteen: 18,69°
-- Kuusikulmio-liitokset: 30°
-- Viisikulmio-liitokset: 36°
-- 2x4 viistokulma: 19,8°
+| | Arvo |
+|---|---:|
+| Ulkohalkaisija | 93,700 in |
+| Särmän pituus, ulko / sisä | 18,906 / 16,701 in |
+| Viiste, kuusikulmio ↔ kuusikulmio | 20,905° |
+| Viiste, kuusikulmio ↔ viisikulmio | 18,689° |
+| Jiiri, kuusikulmio / viisikulmio / leijan kärki | 30° / 36° / 36° |
+| Halkaistun puolikkaan leveys (⅛ in rako) | 1,6875 in |
+| Seinän paksuus | 5,0 in |
+| Moduulit | 23 |
+| 2×4-runkopuut, 96 in | 36 |
+| 4×8-levyt, ¼ in / ¾ in | 16 / 2 |
 
 ## 📁 Projektirakenne
 
@@ -234,7 +291,7 @@ Tämä projekti on lisensoitu **CERN Open Hardware License Version 2 - Vahvasti 
 
 ---
 
-**Thiospheres - Domus Opus Est** (tilan luomisen työ ei koskaan lopu).
+**Thiospheres - Domus Opus Est** (suojan työ ei koskaan lopu).
 
 *"Olemme muotoilleet maailmamme autoille, mutta meillä on vähän muuta käyttää kaikille niille tiloille, jotka olemme antaneet näille koneille."*
 

@@ -1,4 +1,4 @@
-# Thiosphere - Modular Open Source Spaces
+# Thiosphere - Modular Open Source Shelters
 
 [![CERN Open Hardware License v2](https://img.shields.io/badge/License-CERN%20OHL%20v2%20Strongly%20Reciprocal-blue.svg)](LICENSE.md)
 [![Open Source Hardware](https://img.shields.io/badge/Open%20Source-Hardware-green.svg)](https://www.oshwa.org/)
@@ -8,13 +8,13 @@
 
 ---
 
-# Modular Open Source Spaces
+# Modular Open Source Shelters
 
 We have formatted our world for cars, yet have little else to make use of all that space we have given over to these machines. A Thiosphere™ is created to fill that void with a purpose and beauty that defines its bold and efficient design. It is Open Source Hardware that anyone can build and modify to their own needs.
 
 ## Introduction
 
-One thiosphere is made from the fewest number of parts possible, yet resulting in a strong, light and roomy, modular space that only takes up 1/2 of a parking spot. It is flat packable and can be assembled with common tools. It is modular so you can create an endless number of spaces, from a simple shelter to a complex office. It is both functional and beautiful, and designed to be a second place for life to flourish - whatever, and wherever those requirements are.
+One thiosphere is made from the fewest number of parts possible, yet resulting in a strong, light and roomy, modular shelter that only takes up 1/2 of a parking spot. It is flat packable and can be assembled with common tools. It is modular so you can create an endless number of structures, from a simple shelter to a complex office. It is both functional and beautiful, and designed to be a second place for life to flourish - whatever, and wherever those requirements are.
 
 ![Thiosphere Basics](_media/football.png)
 ![Thiosphere Basics](_media/basics.png)
@@ -40,7 +40,6 @@ The CERN Open Hardware License (Version 2 - Strongly Reciprocal) ensures that:
 - **Stays Cool**: Natural convection keeps the environment stable inside
 - **Fits Right In**: Designed for existing parking spaces - no modifications needed
 - **Easy to Build**: Simple geometry means you can make it locally with basic tools
-- **Energy Smart**: Passive design cuts energy needs by 80%
 
 ## What's a Thios?
 
@@ -63,76 +62,137 @@ The CERN Open Hardware License (Version 2 - Strongly Reciprocal) ensures that:
 
 ## Construction Guide
 
+> **Where these numbers come from.** Every figure below is measured from the final Onshape
+> model *Thiosphere for prints* at `#maxWidth` = 93.700 in (verified 2026-09-12). Where the older
+> [Design Document](thiosphere-design-document.md) or
+> [Bill of Materials v0.1](Bill_of_Materials_v.0.1.csv) disagree, this guide is correct.
+
+### At a Glance
+
+| | |
+|---|---|
+| Outer diameter | **93.700 in** (7 ft 9.7 in) |
+| Edge length, outer shell | **18.906 in** |
+| Edge length, inner shell | **16.701 in** |
+| Wall thickness | **5.0 in** — ¼ skin + 1½ rail + 1½ cleat + 1½ rail + ¼ skin |
+| Clear height above the finished floor, at the ridge | **79.829 in** |
+| Floor deck | 12-sided, 88.543 × 91.773 in |
+| Modules | **23** |
+
+The shape is a truncated icosahedron (32 faces: 20 hexagons, 12 pentagons). It rests on an
+edge, not a face.
+
+### The 23 Modules
+
+Only the 22 faces at or above the lower hexagon ring are panels. The 10 faces below are not
+built: types B, C and E extend downward to the deck and take their place.
+
+| Type | Module | Count | How it is made |
+|---|---|---:|---|
+| A | Plain hexagon | 8 | Regular hexagon |
+| B | Door | 4 | Hexagon, two vertical sides extended to the deck |
+| C | Side wall | 2 | Hexagon, two slanted sides extended to the deck |
+| D | Plain pentagon | 4 | Regular pentagon |
+| E | Corner kite | 4 | Pentagon, two sides extended until they meet |
+| FL | Floor deck | 1 | 12-sided, two sheets of ¾ in plywood |
+| | **Total** | **23** | |
+
 ### What You'll Need
 
 **Materials:**
-- 200 - 2x4's
-- 4 - 4'x8' sheets of plywood
-- 120 - nuts and bolts
-- 800 - wood screws
-- 4 casters, a small trailer or a leveling plinth (optional)
+- **36** × 2×4 studs, 96 in long — each one is ripped down the centre (includes 8.5% for kerf and end-drop)
+- **16** × 4×8 sheets of ¼ in plywood — outer and inner skins, with 35% for nesting
+- **2** × 4×8 sheets of ¾ in plywood — floor deck
+- Screws, bolts, and casters, a trailer or a levelling plinth — quantities are being re-derived for the current model and are not listed until they are verified
 
 **Tools:**
+- Table saw with a tilting blade (the bevel is cut during the rip)
 - Compound miter saw
-- Table saw or circular saw
 - Drill/driver
-- Measuring tape
-- Pencil
+- Measuring tape and pencil
 - Safety gear (glasses, hearing protection)
 
 ### Step-by-Step Build
 
-#### 1. Prep Your Wood
+#### 1. Sort Your Stock, Then Rip
 
-**Cut 2x4s to length:**
-- **Outer dome**: 20" edge pieces
-- **Inner dome**: 18.75" edge pieces
+**There are two bevels, not one.**
 
-**Rip 2x4s for edge pieces:**
-- Set table saw to 19.8° bevel angle
-- Rip 2x4s to create angled edge pieces
-- You'll need about 60 pieces for outer dome, 60 for inner dome
+| Rail sits between | Bevel |
+|---|---:|
+| Hexagon ↔ hexagon | **20.905°** |
+| Hexagon ↔ pentagon | **18.689°** |
 
-#### 2. Cut Those Angles
+- Every 2×4 is ripped down the centre with the blade tilted to the bevel. One pass makes the bevel and two rails.
+- With a ⅛ in kerf, each half is 1.6875 in wide.
+- The bevel is set at the rip, and you cannot re-rip a half. **Decide which bevel each stud's rails need before you rip it.**
+- A hexagon module needs **both** bevels: its edges alternate between hexagon and pentagon neighbours. A pentagon module uses 18.689° on all five edges.
 
-**For Outer Dome (8.26' diameter):**
-- **Hexagon to hexagon joints**: 20.91° compound angle
-- **Hexagon to pentagon joints**: 18.69° compound angle
-- **Hexagon joins**: 30° angle
-- **Pentagon joins**: 36° angle
+> ⚠️ **Do not use one averaged bevel of about 19.8°.** It opens a gap of about 5⁄64 in at
+> every joint, and the gaps add up at every corner where three rails meet.
 
-**For Inner Dome (7.74' diameter):**
-- Same angles as outer dome
-- All pieces are shorter (18.75" vs 20")
+#### 2. Cut Rails to Length
 
-#### 3. Put It Together
+**Miters:** 30° at hexagon corners, 36° at pentagon corners, 36° at the kite point.
 
-**Start with the base ring:**
-1. Lay out your first ring of pieces on a flat surface
-2. Join pieces using the calculated angles
+**Lengths** (long point to long point):
+
+| Rail | Outer shell | Inner shell |
+|---|---:|---:|
+| Plain edges — types A and D, and the edges of B, C and E that are not extended | 18.906 in | 16.701 in |
+| B · door, vertical side | 49.497 in | 49.056 in |
+| B · door, deck sill | 32.747 in | 31.218 in |
+| C · side wall, slanted side | 49.497 in | 49.497 in |
+| C · side wall, deck sill | 68.403 in | 67.521 in |
+| E · corner kite, extended side | 49.497 in | 43.724 in |
+
+**Do not make the inner shell by scaling the outer shell.** The extended sides end on the
+deck, and the deck does not move, so they shrink less than the plain edges or not at all.
+That is why the inner shell has six rail lengths and the outer shell has four.
+
+**Total rail stock:** outer shell 112 rails (240.3 ft), inner shell 112 rails (218.3 ft),
+cleats 224 pieces (63.2 ft) — **521.8 linear ft**.
+
+**Batch your cuts by bevel across all modules**, not module by module.
+
+#### 3. Build the Module Frames
+
+1. Build each module frame flat
+2. Join the rails at the miters and check each angle
 3. Use GRK screws to secure joints
-4. Check for roundness and adjust as needed
+4. Join the outer and inner rails with the cleat layer. This sets the 5.0 in wall
+5. Dry-fit neighbouring modules before you fix them
 
-**Build upward in rings:**
-1. Each ring connects to the one below
-2. Keep consistent spacing between inner and outer domes
-3. Use temporary supports to hold pieces in place
+#### 4. Assemble on the Deck
+
+1. Build the floor deck first. It is the plane where every extended side ends
+2. Stand the lower modules (B, C, E) on the deck, then work upward
+3. Use temporary supports to hold modules in place
 4. Work in sections to keep it solid
 
-#### 4. Add the Panels
+**Corner ports:** at each of the four inner corners there is a triangular gap at floor level,
+4.671 in tall × 3.394 in wide. It is a utility port into the wall cavity (it takes 3 in duct
+or a bundled service drop). Close it with a removable cover. Do not fill it.
 
-**Cut plywood panels:**
-- Measure each opening between frame pieces
-- Cut panels to fit with 1/4" gap for expansion
-- Sand edges smooth
+#### 5. Add the Panels
 
-**Install panels:**
-1. Apply silicone caulk to frame edges
-2. Press panels into place
-3. Secure with screws around perimeter
-4. Wipe excess caulk
+**Outer skin — laps shed water:**
+- The panel whose centre is higher laps over the lower one. **Install from the bottom up.**
+- Each lap is 1.5 in, the same as the rail thickness, so it sits fully on the rail of the panel below and you can screw into it.
+- **Cut a capillary break on the underside of every lapping edge:** a ⅛ in wide × ⅛ in deep kerf, 0.5 in in from the edge. Without it, water wicks uphill between the sheets, whatever the lap length.
+- The eight equatorial faces are vertical. Their vertical seams take a gasket or batten, not a lap.
+- The ridge is the one seam with no uphill side. Seal it with a gasket.
 
-#### 5. Weatherproof It
+**Inner skin:**
+- Cut to fit the inner frame
+
+**Install:**
+1. Sand edges smooth
+2. Apply silicone caulk to frame edges
+3. Press panels into place and secure them with screws around the perimeter
+4. Wipe off excess caulk
+
+#### 6. Weatherproof It
 
 **Seal all joints:**
 - Apply silicone caulk to all exterior joints
@@ -146,6 +206,7 @@ The CERN Open Hardware License (Version 2 - Strongly Reciprocal) ensures that:
 
 ### Pro Tips
 
+- **Batch by bevel**: sort stock and group cuts by bevel, never by module
 - **Take your time**: Precision in cutting angles is key
 - **Test fit**: Dry assemble sections before final assembly
 - **Use jigs**: Create simple jigs to hold pieces at correct angles
@@ -160,22 +221,18 @@ The CERN Open Hardware License (Version 2 - Strongly Reciprocal) ensures that:
 
 ### Quick Reference
 
-Outer Dome (8.26' diameter):
-- Edge length: 20"
-- Pentagon diameter: 34.03"
-- Hexagon diameter: 40.00"
-
-Inner Dome (7.74' diameter):
-- Edge length: 18.75"
-- Pentagon diameter: 31.90"
-- Hexagon diameter: 37.50"
-
-Key Angles:
-- Hex to hex: 20.91°
-- Hex to penta: 18.69°
-- Hex joins: 30°
-- Penta joins: 36°
-- 2x4 rip angle: 19.8°
+| | Value |
+|---|---:|
+| Outer diameter | 93.700 in |
+| Edge length, outer / inner | 18.906 / 16.701 in |
+| Bevel, hexagon ↔ hexagon | 20.905° |
+| Bevel, hexagon ↔ pentagon | 18.689° |
+| Miter, hexagon / pentagon / kite point | 30° / 36° / 36° |
+| Ripped half width (⅛ in kerf) | 1.6875 in |
+| Wall thickness | 5.0 in |
+| Modules | 23 |
+| 96 in 2×4 studs | 36 |
+| 4×8 sheets, ¼ in / ¾ in | 16 / 2 |
 
 ## 📁 Project Structure
 
@@ -234,7 +291,7 @@ This project is licensed under the **CERN Open Hardware License Version 2 - Stro
 
 ---
 
-**Thiospheres - Domus Opus Est** (the work of creating space is never ending).
+**Thiospheres - Domus Opus Est** (the work of shelter never ends).
 
 *"We have formatted our world for cars, yet have little else to make use of all that space we have given over to these machines."*
 

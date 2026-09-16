@@ -1,4 +1,4 @@
-# Thiosphere - Modulare Open Source Räume
+# Thiosphere - Modulare Open-Source-Unterkünfte
 
 [![CERN Open Hardware License v2](https://img.shields.io/badge/License-CERN%20OHL%20v2%20Strongly%20Reciprocal-blue.svg)](LICENSE.md)
 [![Open Source Hardware](https://img.shields.io/badge/Open%20Source-Hardware-green.svg)](https://www.oshwa.org/)
@@ -8,13 +8,13 @@
 
 ---
 
-# Modulare Open Source Räume
+# Modulare Open-Source-Unterkünfte
 
 Wir haben unsere Welt für Autos formatiert, haben aber wenig anderes, um all den Platz zu nutzen, den wir diesen Maschinen überlassen haben. Ein Thiosphere™ wird geschaffen, um diese Lücke mit einem Zweck und einer Schönheit zu füllen, die sein kühnes und effizientes Design definiert. Es ist Open Source Hardware, die jeder nach seinen eigenen Bedürfnissen bauen und modifizieren kann.
 
 ## Einführung
 
-Ein Thiosphere besteht aus der kleinstmöglichen Anzahl von Teilen und ergibt dennoch einen starken, leichten und geräumigen, modularen Raum, der nur 1/2 eines Parkplatzes einnimmt. Er ist flach packbar und kann mit gewöhnlichen Werkzeugen montiert werden. Er ist modular, sodass Sie eine endlose Anzahl von Räumen schaffen können, von einem einfachen Unterschlupf bis zu einem komplexen Büro. Er ist sowohl funktional als auch schön und so konzipiert, dass er ein zweiter Ort ist, an dem das Leben gedeihen kann - was auch immer und wo auch immer diese Anforderungen sind.
+Ein Thiosphere besteht aus der kleinstmöglichen Anzahl von Teilen und ergibt dennoch einen starken, leichten und geräumigen, modulare Unterkunft, die nur 1/2 eines Parkplatzes einnimmt. Er ist flach packbar und kann mit gewöhnlichen Werkzeugen montiert werden. Er ist modular, sodass Sie eine endlose Anzahl von Bauwerken schaffen können, von einem einfachen Unterschlupf bis zu einem komplexen Büro. Er ist sowohl funktional als auch schön und so konzipiert, dass er ein zweiter Ort ist, an dem das Leben gedeihen kann - was auch immer und wo auch immer diese Anforderungen sind.
 
 ![Thiosphere Grundlagen](_media/football.png)
 ![Thiosphere Grundlagen](_media/basics.png)
@@ -40,7 +40,6 @@ Die CERN Open Hardware License (Version 2 - Strongly Reciprocal) stellt sicher, 
 - **Bleibt kühl**: Natürliche Konvektion hält die Umgebung innen stabil
 - **Passt perfekt**: Konzipiert für bestehende Parkplätze - keine Modifikationen erforderlich
 - **Einfach zu bauen**: Einfache Geometrie bedeutet, Sie können es lokal mit grundlegenden Werkzeugen herstellen
-- **Energieintelligent**: Passives Design reduziert den Energiebedarf um 80%
 
 ## Was ist ein Thios?
 
@@ -63,119 +62,177 @@ Die CERN Open Hardware License (Version 2 - Strongly Reciprocal) stellt sicher, 
 
 ## Bauanleitung
 
-### Was Sie benötigen
+> **Woher diese Zahlen stammen.** Alle Werte unten sind am finalen Onshape-Modell
+> *Thiosphere for prints* bei `#maxWidth` = 93,700 in gemessen (verifiziert am 2026-09-12). Wo das ältere
+> [Designdokument](thiosphere-design-document.md) oder die
+> [Stückliste v0.1](Bill_of_Materials_v.0.1.csv) abweichen, gilt diese Anleitung.
 
-**Materialien:**
-- 180 - 2x4 Bretter
-- 4 - 4'x8' Sperrholzplatten
-- 120 - Muttern und Schrauben
-- 800 - Holzschrauben
-- 4 Rollen, ein kleiner Anhänger oder ein Nivellierungsfundament (optional)
+### Auf einen Blick
 
-**Werkzeuge:**
-- Gehrungssäge
-- Tischsäge oder Kreissäge
-- Bohrmaschine/Schrauber
-- Maßband
-- Bleistift
-- Sicherheitsausrüstung (Brille, Gehörschutz)
+| | |
+|---|---|
+| Außendurchmesser | **93,700 in** (7 ft 9,7 in) |
+| Kantenlänge, Außenschale | **18,906 in** |
+| Kantenlänge, Innenschale | **16,701 in** |
+| Wandstärke | **5,0 in** — ¼ Beplankung + 1½ Leiste + 1½ Klotz + 1½ Leiste + ¼ Beplankung |
+| Lichte Höhe über dem fertigen Boden, am First | **79,829 in** |
+| Bodendeck | 12-eckig, 88,543 × 91,773 in |
+| Module | **23** |
 
-### Schritt-für-Schritt Bau
+Die Form ist ein abgestumpftes Ikosaeder (32 Flächen: 20 Sechsecke, 12 Fünfecke). Sie steht
+auf einer Kante, nicht auf einer Fläche.
 
-#### 1. Holz vorbereiten
+### Die 23 Module
 
-**2x4 Bretter auf Länge schneiden:**
-- **Äußere Kuppel**: 20" Kantenstücke
-- **Innere Kuppel**: 18,75" Kantenstücke
+Nur die 22 Flächen auf Höhe des unteren Sechseckrings und darüber sind Paneele. Die 10 Flächen
+darunter werden nicht gebaut: Die Typen B, C und E reichen nach unten bis zum Deck und ersetzen sie.
 
-**2x4 Bretter für Kantenstücke sägen:**
-- Tischsäge auf 19,8° Schrägwinkel einstellen
-- 2x4 Bretter sägen, um abgewinkelte Kantenstücke zu erstellen
-- Sie benötigen etwa 60 Stück für die äußere Kuppel, 60 für die innere Kuppel
+| Typ | Modul | Anzahl | Aufbau |
+|---|---|---:|---|
+| A | Einfaches Sechseck | 8 | Regelmäßiges Sechseck |
+| B | Tür | 4 | Sechseck, zwei senkrechte Seiten bis zum Deck verlängert |
+| C | Seitenwand | 2 | Sechseck, zwei schräge Seiten bis zum Deck verlängert |
+| D | Einfaches Fünfeck | 4 | Regelmäßiges Fünfeck |
+| E | Eckdrachen | 4 | Fünfeck, zwei Seiten verlängert, bis sie sich treffen |
+| FL | Bodendeck | 1 | 12-eckig, zwei Platten ¾ in Sperrholz |
+| | **Summe** | **23** | |
 
-#### 2. Winkel schneiden
+### Was Sie brauchen
 
-**Für äußere Kuppel (8,26' Durchmesser):**
-- **Sechseck zu Sechseck Verbindungen**: 20,91° Verbundwinkel
-- **Sechseck zu Fünfeck Verbindungen**: 18,69° Verbundwinkel
-- **Sechseck Verbindungen**: 30° Winkel
-- **Fünfeck Verbindungen**: 36° Winkel
+**Material:**
+- **36** × 2×4-Kanthölzer, 96 in lang — jedes wird mittig aufgetrennt (inklusive 8,5% für Schnittfuge und Verschnitt)
+- **16** × 4×8-Platten ¼ in Sperrholz — Außen- und Innenbeplankung, mit 35% für die Schachtelung
+- **2** × 4×8-Platten ¾ in Sperrholz — Bodendeck
+- Schrauben, Bolzen sowie Rollen, Anhänger oder ein Nivellier-Sockel — die Mengen werden für das aktuelle Modell neu ermittelt und erst nach der Prüfung angegeben
 
-**Für innere Kuppel (7,74' Durchmesser):**
-- Gleiche Winkel wie äußere Kuppel
-- Alle Stücke sind kürzer (18,75" vs 20")
+**Werkzeug:**
+- Tischkreissäge mit schwenkbarem Sägeblatt (die Fase entsteht beim Auftrennen)
+- Kapp- und Gehrungssäge
+- Bohrschrauber
+- Maßband und Bleistift
+- Schutzausrüstung (Brille, Gehörschutz)
 
-#### 3. Zusammenbauen
+### Schritt-für-Schritt-Bau
 
-**Mit dem Grundring beginnen:**
-1. Legen Sie Ihren ersten Ring von Stücken auf eine ebene Fläche
-2. Verbinden Sie Stücke mit den berechneten Winkeln
-3. Verwenden Sie GRK-Schrauben, um Verbindungen zu sichern
-4. Überprüfen Sie die Rundheit und passen Sie bei Bedarf an
+#### 1. Holz sortieren, dann auftrennen
 
-**Ring für Ring nach oben bauen:**
-1. Jeder Ring verbindet sich mit dem darunter liegenden
-2. Halten Sie gleichmäßigen Abstand zwischen innerer und äußerer Kuppel
-3. Verwenden Sie temporäre Stützen, um Stücke an Ort und Stelle zu halten
-4. Arbeiten Sie in Abschnitten, um es stabil zu halten
+**Es gibt zwei Fasenwinkel, nicht einen.**
 
-#### 4. Paneele hinzufügen
+| Leiste liegt zwischen | Fase |
+|---|---:|
+| Sechseck ↔ Sechseck | **20,905°** |
+| Sechseck ↔ Fünfeck | **18,689°** |
 
-**Sperrholzpaneele schneiden:**
-- Messen Sie jede Öffnung zwischen Rahmenteilen
-- Schneiden Sie Paneele mit 1/4" Spalt für Ausdehnung zu
-- Schleifen Sie Kanten glatt
+- Jedes 2×4 wird mit geschwenktem Sägeblatt mittig aufgetrennt. Ein Schnitt erzeugt die Fase und zwei Leisten.
+- Bei ⅛ in Schnittfuge ist jede Hälfte 1,6875 in breit.
+- Die Fase wird beim Auftrennen festgelegt, und eine Hälfte lässt sich nicht erneut auftrennen. **Legen Sie vor dem Auftrennen fest, welche Fase die Leisten jedes Kantholzes brauchen.**
+- Ein Sechseckmodul braucht **beide** Fasen: Seine Kanten grenzen abwechselnd an Sechsecke und Fünfecke. Ein Fünfeckmodul hat an allen fünf Kanten 18,689°.
 
-**Paneele installieren:**
-1. Silikon-Dichtmasse auf Rahmenkanten auftragen
-2. Paneele an Ort und Stelle drücken
-3. Mit Schrauben um den Umfang sichern
+> ⚠️ **Verwenden Sie keine gemittelte Fase von etwa 19,8°.** Sie öffnet an jeder Verbindung
+> eine Fuge von etwa 5⁄64 in, und die Fugen summieren sich an jeder Ecke, an der drei Leisten zusammentreffen.
+
+#### 2. Leisten auf Länge schneiden
+
+**Gehrungen:** 30° an Sechseckecken, 36° an Fünfeckecken, 36° an der Drachenspitze.
+
+**Längen** (Spitze zu Spitze):
+
+| Leiste | Außenschale | Innenschale |
+|---|---:|---:|
+| Einfache Kanten — Typen A und D sowie die nicht verlängerten Kanten von B, C und E | 18,906 in | 16,701 in |
+| B · Tür, senkrechte Seite | 49,497 in | 49,056 in |
+| B · Tür, Deckschwelle | 32,747 in | 31,218 in |
+| C · Seitenwand, schräge Seite | 49,497 in | 49,497 in |
+| C · Seitenwand, Deckschwelle | 68,403 in | 67,521 in |
+| E · Eckdrachen, verlängerte Seite | 49,497 in | 43,724 in |
+
+**Erzeugen Sie die Innenschale nicht durch Skalieren der Außenschale.** Die verlängerten Seiten
+enden am Deck, und das Deck bewegt sich nicht, daher werden sie weniger oder gar nicht kürzer als
+die einfachen Kanten. Deshalb hat die Innenschale sechs Leistenlängen und die Außenschale vier.
+
+**Gesamter Leistenbedarf:** Außenschale 112 Leisten (240,3 ft), Innenschale 112 Leisten (218,3 ft),
+Klötze 224 Stück (63,2 ft) — **521,8 laufende ft**.
+
+**Bündeln Sie die Schnitte nach Fase über alle Module hinweg**, nicht Modul für Modul.
+
+#### 3. Modulrahmen bauen
+
+1. Bauen Sie jeden Modulrahmen flach
+2. Verbinden Sie die Leisten an den Gehrungen und prüfen Sie jeden Winkel
+3. Sichern Sie die Verbindungen mit GRK-Schrauben
+4. Verbinden Sie äußere und innere Leisten mit der Klotzlage. Sie ergibt die 5,0 in Wandstärke
+5. Passen Sie benachbarte Module trocken an, bevor Sie sie befestigen
+
+#### 4. Auf dem Deck montieren
+
+1. Bauen Sie zuerst das Bodendeck. Es ist die Ebene, an der jede verlängerte Seite endet
+2. Stellen Sie die unteren Module (B, C, E) auf das Deck und arbeiten Sie sich nach oben
+3. Halten Sie Module mit provisorischen Stützen in Position
+4. Arbeiten Sie abschnittsweise, damit alles stabil bleibt
+
+**Eckdurchlässe:** An jeder der vier inneren Ecken bleibt auf Bodenhöhe eine dreieckige Öffnung,
+4,671 in hoch × 3,394 in breit. Sie ist ein Leitungsdurchlass in den Wandhohlraum (für 3-in-Rohr
+oder ein Leitungsbündel). Schließen Sie sie mit einer abnehmbaren Abdeckung. Füllen Sie sie nicht aus.
+
+#### 5. Paneele anbringen
+
+**Außenbeplankung — Überlappungen leiten Wasser ab:**
+- Das Paneel mit dem höher liegenden Mittelpunkt überlappt das tiefere. **Montieren Sie von unten nach oben.**
+- Jede Überlappung ist 1,5 in breit, genau wie die Leistenstärke, liegt also vollständig auf der Leiste des Paneels darunter und lässt sich dort verschrauben.
+- **Schneiden Sie an der Unterseite jeder überlappenden Kante eine Kapillarsperre:** eine Nut ⅛ in breit × ⅛ in tief, 0,5 in von der Kante. Ohne sie zieht Wasser zwischen den Platten nach oben, egal wie lang die Überlappung ist.
+- Die acht Flächen am Äquator stehen senkrecht. Ihre senkrechten Fugen erhalten eine Dichtung oder Deckleiste, keine Überlappung.
+- Der First ist die einzige Fuge ohne höher liegende Seite. Dichten Sie ihn mit einer Dichtung ab.
+
+**Innenbeplankung:**
+- Passend zum inneren Rahmen zuschneiden
+
+**Montage:**
+1. Kanten glatt schleifen
+2. Silikon-Dichtmasse auf die Rahmenkanten auftragen
+3. Paneele andrücken und rundum verschrauben
 4. Überschüssige Dichtmasse abwischen
 
-#### 5. Wetterfest machen
+#### 6. Wetterfest machen
 
-**Alle Verbindungen abdichten:**
-- Silikon-Dichtmasse auf alle Außenverbindungen auftragen
-- Besonderes Augenmerk auf Paneelkanten legen
+**Alle Fugen abdichten:**
+- Silikon-Dichtmasse auf alle Außenfugen auftragen
+- Besonders auf Paneelkanten achten
 - 24 Stunden aushärten lassen
 
-**Finish auftragen:**
-- Alle Holzoberflächen lackieren oder versiegeln
-- Außenlack für Außennutzung verwenden
-- Mehrere Schichten für Haltbarkeit auftragen
+**Oberfläche behandeln:**
+- Alle Holzflächen streichen oder versiegeln
+- Für den Außenbereich wetterfeste Farbe verwenden
+- Mehrere Schichten auftragen
 
-### Pro-Tipps
+### Profi-Tipps
 
-- **Nehmen Sie sich Zeit**: Präzision beim Schneiden der Winkel ist entscheidend
-- **Probeanpassung**: Trockenmontage von Abschnitten vor der Endmontage
-- **Verwenden Sie Schablonen**: Erstellen Sie einfache Schablonen, um Stücke in korrekten Winkeln zu halten
-- **Arbeiten Sie zu zweit**: Einige Montageschritte sind mit Hilfe einfacher
-- **Messungen prüfen**: Überprüfen Sie jedes Stück vor dem Schneiden
+- **Nach Fase bündeln**: Holz sortieren und Schnitte nach Fase gruppieren, nie nach Modul
+- **Nehmen Sie sich Zeit**: Präzision bei den Winkeln entscheidet
+- **Probe-Montage**: Abschnitte vor der Endmontage trocken zusammensetzen
+- **Schablonen nutzen**: Einfache Vorrichtungen halten Teile im richtigen Winkel
+- **Zu zweit arbeiten**: Manche Montageschritte gehen mit Hilfe leichter
+- **Maße prüfen**: Jedes Teil vor dem Schnitt kontrollieren
 
 ### Ressourcen
 
-- [Gehrungssäge-Rechner](https://jansson.us/jcompound.html) - Wesentlich für die Berechnung präziser Winkel
-- [GRK FIN/Trim™ Schrauben](https://grkfasteners.ca/product/fin-trim-finishing-trim-head-screw/) - Empfohlen für sauberes Finish
-- [McMaster-Carr Hardware](https://www.mcmaster.com/90273A572/) - Für zusätzliche Befestigungselemente und Hardware
+- [Compound Miter Saw Calculator](https://jansson.us/jcompound.html) - Zur Berechnung präziser Winkel
+- [GRK FIN/Trim™ Schrauben](https://grkfasteners.ca/product/fin-trim-finishing-trim-head-screw/) - Empfohlen für ein sauberes Finish
+- [McMaster-Carr Hardware](https://www.mcmaster.com/90273A572/) - Für weitere Befestigungsteile
 
-### Schnellreferenz
+### Kurzreferenz
 
-Äußere Kuppel (8,26' Durchmesser):
-- Kantenlänge: 20"
-- Fünfeck-Durchmesser: 34,03"
-- Sechseck-Durchmesser: 40,00"
-
-Innere Kuppel (7,74' Durchmesser):
-- Kantenlänge: 18,75"
-- Fünfeck-Durchmesser: 31,90"
-- Sechseck-Durchmesser: 37,50"
-
-Wichtige Winkel:
-- Sechseck zu Sechseck: 20,91°
-- Sechseck zu Fünfeck: 18,69°
-- Sechseck-Verbindungen: 30°
-- Fünfeck-Verbindungen: 36°
-- 2x4 Sägewinkel: 19,8°
+| | Wert |
+|---|---:|
+| Außendurchmesser | 93,700 in |
+| Kantenlänge, außen / innen | 18,906 / 16,701 in |
+| Fase, Sechseck ↔ Sechseck | 20,905° |
+| Fase, Sechseck ↔ Fünfeck | 18,689° |
+| Gehrung, Sechseck / Fünfeck / Drachenspitze | 30° / 36° / 36° |
+| Breite einer aufgetrennten Hälfte (⅛ in Fuge) | 1,6875 in |
+| Wandstärke | 5,0 in |
+| Module | 23 |
+| 2×4-Kanthölzer, 96 in | 36 |
+| 4×8-Platten, ¼ in / ¾ in | 16 / 2 |
 
 ## 📁 Projektstruktur
 
@@ -234,7 +291,7 @@ Dieses Projekt ist unter der **CERN Open Hardware License Version 2 - Strongly R
 
 ---
 
-**Thiospheres - Domus Opus Est** (die Arbeit des Raumeschaffens ist niemals endend).
+**Thiospheres - Domus Opus Est** (die Arbeit am Obdach endet nie).
 
 *"Wir haben unsere Welt für Autos formatiert, haben aber wenig anderes, um all den Platz zu nutzen, den wir diesen Maschinen überlassen haben."*
 
