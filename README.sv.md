@@ -1,4 +1,4 @@
-# Thiosphere - Modulära Open Source-utrymmen
+# Thiosphere - Modulära Open Source-skydd
 
 [![CERN Open Hardware License v2](https://img.shields.io/badge/License-CERN%20OHL%20v2%20Strongly%20Reciprocal-blue.svg)](LICENSE.md)
 [![Open Source Hardware](https://img.shields.io/badge/Open%20Source-Hardware-green.svg)](https://www.oshwa.org/)
@@ -8,13 +8,13 @@
 
 ---
 
-# Modulära Open Source-utrymmen
+# Modulära Open Source-skydd
 
 Vi har formaterat vår värld för bilar, men har lite annat för att använda allt det utrymme vi har gett över till dessa maskiner. En Thiosphere™ skapas för att fylla det tomrummet med ett syfte och skönhet som definierar dess djärva och effektiva design. Det är Open Source-hårdvara som vem som helst kan bygga och modifiera efter sina egna behov.
 
 ## Introduktion
 
-En thiosphere är tillverkad av det minsta möjliga antalet delar, men resulterar i ett starkt, lätt och rymligt modulärt utrymme som bara tar upp 1/2 av en parkeringsplats. Den är platt packbar och kan monteras med vanliga verktyg. Den är modulär så du kan skapa ett oändligt antal utrymmen, från ett enkelt skydd till ett komplext kontor. Den är både funktionell och vacker, och designad för att vara en andra plats där livet kan blomstra - vad det än är och var dessa krav finns.
+En thiosphere är tillverkad av det minsta möjliga antalet delar, men resulterar i ett starkt, lätt och rymligt modulärt skydd som bara tar upp 1/2 av en parkeringsplats. Den är platt packbar och kan monteras med vanliga verktyg. Den är modulär så du kan skapa ett oändligt antal konstruktioner, från ett enkelt skydd till ett komplext kontor. Den är både funktionell och vacker, och designad för att vara en andra plats där livet kan blomstra - vad det än är och var dessa krav finns.
 
 ![Thiosphere Grunderna](_media/football.png)
 ![Thiosphere Grunderna](_media/basics.png)
@@ -40,7 +40,6 @@ CERN Open Hardware License (Version 2 - Starkt Reciprok) säkerställer att:
 - **Håller sig Svalt**: Naturlig konvektion håller miljön stabil inuti
 - **Passar Perfekt**: Designad för befintliga parkeringsplatser - inga modifieringar behövs
 - **Enkelt att Bygga**: Enkel geometri betyder att du kan göra det lokalt med grundläggande verktyg
-- **Energismart**: Passiv design minskar energibehovet med 80%
 
 ## Vad är en Thios?
 
@@ -63,119 +62,177 @@ CERN Open Hardware License (Version 2 - Starkt Reciprok) säkerställer att:
 
 ## Byggguide
 
-### Vad Du Behöver
+> **Var siffrorna kommer ifrån.** Alla värden nedan är uppmätta i den slutliga Onshape-modellen
+> *Thiosphere for prints* vid `#maxWidth` = 93,700 in (verifierat 2026-09-12). Där det äldre
+> [Designdokumentet](thiosphere-design-document.md) eller
+> [Materiallistan v0.1](Bill_of_Materials_v.0.1.csv) avviker gäller den här guiden.
+
+### I Korthet
+
+| | |
+|---|---|
+| Ytterdiameter | **93,700 in** (7 ft 9,7 in) |
+| Kantlängd, yttre skal | **18,906 in** |
+| Kantlängd, inre skal | **16,701 in** |
+| Väggtjocklek | **5,0 in** — ¼ skiva + 1½ list + 1½ kloss + 1½ list + ¼ skiva |
+| Fri höjd över färdigt golv, vid nocken | **79,829 in** |
+| Golvbjälklag | 12-sidigt, 88,543 × 91,773 in |
+| Moduler | **23** |
+
+Formen är en trunkerad ikosaeder (32 ytor: 20 hexagoner, 12 pentagoner). Den vilar på en
+kant, inte på en yta.
+
+### De 23 Modulerna
+
+Bara de 22 ytorna i höjd med den nedre hexagonringen eller ovanför är paneler. De 10 ytorna
+under byggs inte: typ B, C och E förlängs ned till golvbjälklaget och tar deras plats.
+
+| Typ | Modul | Antal | Hur den görs |
+|---|---|---:|---|
+| A | Enkel hexagon | 8 | Regelbunden hexagon |
+| B | Dörr | 4 | Hexagon, två lodräta sidor förlängda till golvbjälklaget |
+| C | Sidovägg | 2 | Hexagon, två lutande sidor förlängda till golvbjälklaget |
+| D | Enkel pentagon | 4 | Regelbunden pentagon |
+| E | Hörndrake | 4 | Pentagon, två sidor förlängda tills de möts |
+| FL | Golvbjälklag | 1 | 12-sidigt, två skivor ¾ in plywood |
+| | **Totalt** | **23** | |
+
+### Det Här Behöver Du
 
 **Material:**
-- 180 - 2x4 brädor
-- 4 - 4'x8' plywoodskivor
-- 120 - muttrar och bultar
-- 800 - träskruvar
-- 4 hjul, en liten trailer eller en nivelleringsplint (valfritt)
+- **36** × 2×4-reglar, 96 in långa — var och en klyvs på mitten (inklusive 8,5% för sågsnitt och spill)
+- **16** × 4×8-skivor ¼ in plywood — yttre och inre skiva, med 35% för utläggning
+- **2** × 4×8-skivor ¾ in plywood — golvbjälklag
+- Skruv, bultar och hjul, släpvagn eller en nivelleringssockel — mängderna räknas om för den nuvarande modellen och anges inte förrän de är verifierade
 
 **Verktyg:**
-- Sammansatt mitersåg
-- Bordsåg eller cirkelsåg
-- Borr/skruvmejsel
-- Måttband
-- Penna
-- Säkerhetsutrustning (glasögon, hörselskydd)
+- Bordssåg med lutbart sågblad (fasen sågas vid klyvningen)
+- Kap- och gersåg
+- Borrskruvdragare
+- Måttband och penna
+- Skyddsutrustning (glasögon, hörselskydd)
 
-### Steg-för-steg Bygge
+### Steg-för-Steg-Bygge
 
-#### 1. Förbered Träet
+#### 1. Sortera Virket, Klyv Sedan
 
-**Skär 2x4 till längd:**
-- **Yttre kupol**: 20" kantbitar
-- **Inre kupol**: 18,75" kantbitar
+**Det finns två fasvinklar, inte en.**
 
-**Skär 2x4 för kantbitar:**
-- Ställ in bordsåg till 19,8° fasvinkel
-- Skär 2x4 för att skapa vinklade kantbitar
-- Du behöver cirka 60 bitar för yttre kupol, 60 för inre kupol
+| Listen sitter mellan | Fas |
+|---|---:|
+| Hexagon ↔ hexagon | **20,905°** |
+| Hexagon ↔ pentagon | **18,689°** |
 
-#### 2. Skär Dessa Vinklar
+- Varje 2×4 klyvs på mitten med sågbladet lutat till fasvinkeln. Ett snitt ger fasen och två lister.
+- Med ⅛ in sågsnitt blir varje halva 1,6875 in bred.
+- Fasen bestäms vid klyvningen, och en halva kan inte klyvas om. **Bestäm vilken fas varje regels lister behöver innan du klyver den.**
+- En hexagonmodul behöver **båda** fasvinklarna: dess kanter växlar mellan hexagon- och pentagongrannar. En pentagonmodul har 18,689° på alla fem kanter.
 
-**För Yttre Kupol (8,26' diameter):**
-- **Hexagon till hexagon-fogar**: 20,91° sammansatt vinkel
-- **Hexagon till pentagon-fogar**: 18,69° sammansatt vinkel
-- **Hexagon-fogar**: 30° vinkel
-- **Pentagon-fogar**: 36° vinkel
+> ⚠️ **Använd inte en enda medelvärdesfas på cirka 19,8°.** Den öppnar en glipa på cirka 5⁄64 in i
+> varje fog, och glipor läggs ihop i varje hörn där tre lister möts.
 
-**För Inre Kupol (7,74' diameter):**
-- Samma vinklar som yttre kupol
-- Alla bitar är kortare (18,75" vs 20")
+#### 2. Kapa Listerna i Längd
 
-#### 3. Sätt Ihop Det
+**Geringar:** 30° i hexagonhörn, 36° i pentagonhörn, 36° i drakens spets.
 
-**Börja med basringen:**
-1. Lägg ut din första ring av bitar på en platt yta
-2. Foga bitar med de beräknade vinklarna
-3. Använd GRK-skruvar för att säkra fogar
-4. Kontrollera rundhet och justera vid behov
+**Längder** (spets till spets):
 
-**Bygg uppåt i ringar:**
-1. Varje ring ansluter till den under
-2. Håll konsekvent avstånd mellan inre och yttre kupoler
-3. Använd temporära stöd för att hålla bitar på plats
-4. Arbeta i sektioner för att hålla det stabilt
+| List | Yttre skal | Inre skal |
+|---|---:|---:|
+| Enkla kanter — typ A och D samt de kanter på B, C och E som inte är förlängda | 18,906 in | 16,701 in |
+| B · dörr, lodrät sida | 49,497 in | 49,056 in |
+| B · dörr, syll | 32,747 in | 31,218 in |
+| C · sidovägg, lutande sida | 49,497 in | 49,497 in |
+| C · sidovägg, syll | 68,403 in | 67,521 in |
+| E · hörndrake, förlängd sida | 49,497 in | 43,724 in |
 
-#### 4. Lägg Till Panelerna
+**Gör inte det inre skalet genom att skala ned det yttre.** De förlängda sidorna slutar vid
+golvbjälklaget, och det flyttar sig inte, så de blir mindre kortare än de enkla kanterna eller inte
+kortare alls. Därför har det inre skalet sex listlängder och det yttre fyra.
 
-**Skär plywoodpaneler:**
-- Mät varje öppning mellan rambitar
-- Skär paneler för att passa med 1/4" mellanrum för expansion
-- Slipa kanter släta
+**Total listmängd:** yttre skal 112 lister (240,3 ft), inre skal 112 lister (218,3 ft),
+klossar 224 st (63,2 ft) — **521,8 löpfot**.
 
-**Installera paneler:**
-1. Applicera silikonfog på ramkanter
-2. Tryck paneler på plats
-3. Säkra med skruvar runt omkretsen
+**Samla kapningarna per fas över alla moduler**, inte modul för modul.
+
+#### 3. Bygg Modulramarna
+
+1. Bygg varje modulram plant
+2. Foga ihop listerna vid geringarna och kontrollera varje vinkel
+3. Fäst fogarna med GRK-skruv
+4. Förbind yttre och inre lister med klosslagret. Det ger den 5,0 in tjocka väggen
+5. Provpassa grannmoduler innan du fäster dem
+
+#### 4. Montera på Golvbjälklaget
+
+1. Bygg golvbjälklaget först. Det är planet där varje förlängd sida slutar
+2. Ställ de nedre modulerna (B, C, E) på golvbjälklaget och arbeta uppåt
+3. Håll modulerna på plats med tillfälliga stöd
+4. Arbeta i sektioner så att det blir stabilt
+
+**Hörngenomföringar:** i vart och ett av de fyra inre hörnen blir det en triangulär öppning i golvhöjd,
+4,671 in hög × 3,394 in bred. Den är en installationsgenomföring in i väggens hålrum (rymmer ett 3 in-rör
+eller en kabelbunt). Stäng den med ett avtagbart lock. Fyll inte igen den.
+
+#### 5. Sätt Panelerna
+
+**Yttre skiva — överlapp leder bort vatten:**
+- Panelen vars mittpunkt sitter högre överlappar den lägre. **Montera nerifrån och upp.**
+- Varje överlapp är 1,5 in, samma som listens tjocklek, så den vilar helt på listen hos panelen under och kan skruvas i den.
+- **Såga ett kapillärbrott på undersidan av varje överlappande kant:** ett spår ⅛ in brett × ⅛ in djupt, 0,5 in in från kanten. Utan det sugs vatten uppåt mellan skivorna, oavsett överlappets längd.
+- De åtta ekvatoriella ytorna är lodräta. Deras lodräta fogar får en tätningslist eller täcklist, inte överlapp.
+- Nocken är den enda fogen utan högre sida. Täta den med en tätningslist.
+
+**Inre skiva:**
+- Kapa så att den passar den inre ramen
+
+**Montering:**
+1. Slipa kanterna släta
+2. Stryk silikonfog på ramkanterna
+3. Tryck panelerna på plats och skruva fast dem runt om
 4. Torka bort överflödig fog
 
-#### 5. Vattentät Det
+#### 6. Väderskydda
 
 **Täta alla fogar:**
-- Applicera silikonfog på alla yttre fogar
-- Var särskilt uppmärksam på panelkanter
-- Låt det härda i 24 timmar
+- Stryk silikonfog på alla yttre fogar
+- Var särskilt noga med panelkanterna
+- Låt härda i 24 timmar
 
-**Applicera finish:**
-- Måla eller täta alla träytor
-- Använd utomhusmålar för utomhusbruk
-- Applicera flera lager för hållbarhet
+**Ytbehandla:**
+- Måla eller försegla alla träytor
+- Använd utomhusfärg för bruk utomhus
+- Stryk flera lager för hållbarhet
 
-### Pro-tips
+### Proffstips
 
-- **Ta dig tid**: Precision vid skärning av vinklar är nyckeln
-- **Provpassning**: Torrmontera sektioner före slutmontering
-- **Använd mallar**: Skapa enkla mallar för att hålla bitar i rätt vinklar
-- **Arbeta i par**: Vissa monteringssteg är lättare med hjälp
-- **Kontrollera mått**: Verifiera varje bit före skärning
+- **Samla per fas**: sortera virket och gruppera kapningar per fas, aldrig per modul
+- **Ta god tid**: Precision i vinklarna är avgörande
+- **Provpassa**: Torrmontera sektioner före slutmontering
+- **Använd jiggar**: Gör enkla jiggar som håller delarna i rätt vinkel
+- **Arbeta två och två**: Vissa monteringssteg går lättare med hjälp
+- **Kontrollera måtten**: Kontrollera varje del innan du kapar
 
 ### Resurser
 
-- [Sammansatt Mitersåg-kalkylator](https://jansson.us/jcompound.html) - Väsentlig för att beräkna precisa vinklar
-- [GRK FIN/Trim™ Skruvar](https://grkfasteners.ca/product/fin-trim-finishing-trim-head-screw/) - Rekommenderad för ren finish
-- [McMaster-Carr Hårdvara](https://www.mcmaster.com/90273A572/) - För ytterligare fästelement och hårdvara
+- [Compound Miter Saw Calculator](https://jansson.us/jcompound.html) - För att räkna ut exakta vinklar
+- [GRK FIN/Trim™-skruv](https://grkfasteners.ca/product/fin-trim-finishing-trim-head-screw/) - Rekommenderas för en ren finish
+- [McMaster-Carr Hardware](https://www.mcmaster.com/90273A572/) - För fler fästelement
 
 ### Snabbreferens
 
-Yttre Kupol (8,26' diameter):
-- Kantlängd: 20"
-- Pentagon-diameter: 34,03"
-- Hexagon-diameter: 40,00"
-
-Inre Kupol (7,74' diameter):
-- Kantlängd: 18,75"
-- Pentagon-diameter: 31,90"
-- Hexagon-diameter: 37,50"
-
-Viktiga Vinklar:
-- Hex till hex: 20,91°
-- Hex till penta: 18,69°
-- Hex-fogar: 30°
-- Penta-fogar: 36°
-- 2x4 skärvinkel: 19,8°
+| | Värde |
+|---|---:|
+| Ytterdiameter | 93,700 in |
+| Kantlängd, yttre / inre | 18,906 / 16,701 in |
+| Fas, hexagon ↔ hexagon | 20,905° |
+| Fas, hexagon ↔ pentagon | 18,689° |
+| Gering, hexagon / pentagon / drakspets | 30° / 36° / 36° |
+| Bredd på kluven halva (⅛ in snitt) | 1,6875 in |
+| Väggtjocklek | 5,0 in |
+| Moduler | 23 |
+| 2×4-reglar, 96 in | 36 |
+| 4×8-skivor, ¼ in / ¾ in | 16 / 2 |
 
 ## 📁 Projektstruktur
 
@@ -234,7 +291,7 @@ Detta projekt är licensierad under **CERN Open Hardware License Version 2 - Sta
 
 ---
 
-**Thiospheres - Domus Opus Est** (arbetet att skapa utrymme är aldrig slut).
+**Thiospheres - Domus Opus Est** (arbetet med skydd tar aldrig slut).
 
 *"Vi har formaterat vår värld för bilar, men har lite annat för att använda allt det utrymme vi har gett över till dessa maskiner."*
 
