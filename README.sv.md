@@ -140,10 +140,10 @@ under byggs inte: typ B, C och E förlängs ned till golvbjälklaget och tar der
 | List | Yttre skal | Inre skal |
 |---|---:|---:|
 | Enkla kanter — typ A och D samt de kanter på B, C och E som inte är förlängda | 18,906 in | 16,701 in |
-| B · dörr, lodrät sida | 49,497 in | 49,056 in |
-| B · dörr, syll | 32,747 in | 31,218 in |
+| B · dörr, lodrät sida | 49,497 in | 48,395 in |
+| B · dörr, syll | 32,747 in | 28,927 in |
 | C · sidovägg, lutande sida | 49,497 in | 49,497 in |
-| C · sidovägg, syll | 68,403 in | 67,521 in |
+| C · sidovägg, syll | 68,403 in | 66,198 in |
 | E · hörndrake, förlängd sida | 49,497 in | 43,724 in |
 
 **Gör inte det inre skalet genom att skala ned det yttre.** De förlängda sidorna slutar vid
