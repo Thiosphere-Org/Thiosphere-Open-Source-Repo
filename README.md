@@ -140,10 +140,10 @@ built: types B, C and E extend downward to the deck and take their place.
 | Rail | Outer shell | Inner shell |
 |---|---:|---:|
 | Plain edges — types A and D, and the edges of B, C and E that are not extended | 18.906 in | 16.701 in |
-| B · door, vertical side | 49.497 in | 49.056 in |
-| B · door, deck sill | 32.747 in | 31.218 in |
+| B · door, vertical side | 49.497 in | 48.395 in |
+| B · door, deck sill | 32.747 in | 28.927 in |
 | C · side wall, slanted side | 49.497 in | 49.497 in |
-| C · side wall, deck sill | 68.403 in | 67.521 in |
+| C · side wall, deck sill | 68.403 in | 66.198 in |
 | E · corner kite, extended side | 49.497 in | 43.724 in |
 
 **Do not make the inner shell by scaling the outer shell.** The extended sides end on the

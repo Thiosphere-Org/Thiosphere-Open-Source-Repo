@@ -140,10 +140,10 @@ Les 10 faces en dessous ne sont pas construites : les types B, C et E descendent
 | Tasseau | Coque extérieure | Coque intérieure |
 |---|---:|---:|
 | Arêtes simples — types A et D, et les arêtes non prolongées de B, C et E | 18,906 in | 16,701 in |
-| B · porte, côté vertical | 49,497 in | 49,056 in |
-| B · porte, seuil | 32,747 in | 31,218 in |
+| B · porte, côté vertical | 49,497 in | 48,395 in |
+| B · porte, seuil | 32,747 in | 28,927 in |
 | C · paroi latérale, côté incliné | 49,497 in | 49,497 in |
-| C · paroi latérale, seuil | 68,403 in | 67,521 in |
+| C · paroi latérale, seuil | 68,403 in | 66,198 in |
 | E · cerf-volant d'angle, côté prolongé | 49,497 in | 43,724 in |
 
 **Ne réalisez pas la coque intérieure en réduisant la coque extérieure à l'échelle.** Les côtés

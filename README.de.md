@@ -140,10 +140,10 @@ darunter werden nicht gebaut: Die Typen B, C und E reichen nach unten bis zum De
 | Leiste | Außenschale | Innenschale |
 |---|---:|---:|
 | Einfache Kanten — Typen A und D sowie die nicht verlängerten Kanten von B, C und E | 18,906 in | 16,701 in |
-| B · Tür, senkrechte Seite | 49,497 in | 49,056 in |
-| B · Tür, Deckschwelle | 32,747 in | 31,218 in |
+| B · Tür, senkrechte Seite | 49,497 in | 48,395 in |
+| B · Tür, Deckschwelle | 32,747 in | 28,927 in |
 | C · Seitenwand, schräge Seite | 49,497 in | 49,497 in |
-| C · Seitenwand, Deckschwelle | 68,403 in | 67,521 in |
+| C · Seitenwand, Deckschwelle | 68,403 in | 66,198 in |
 | E · Eckdrachen, verlängerte Seite | 49,497 in | 43,724 in |
 
 **Erzeugen Sie die Innenschale nicht durch Skalieren der Außenschale.** Die verlängerten Seiten

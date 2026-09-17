@@ -140,10 +140,10 @@ Alapuolen 10 tahkoa ei rakenneta: tyypit B, C ja E jatkuvat lattiatasoon asti ja
 | Rima | Ulkokuori | Sisäkuori |
 |---|---:|---:|
 | Tavalliset särmät — tyypit A ja D sekä B:n, C:n ja E:n jatkamattomat särmät | 18,906 in | 16,701 in |
-| B · ovi, pystysivu | 49,497 in | 49,056 in |
-| B · ovi, kynnys | 32,747 in | 31,218 in |
+| B · ovi, pystysivu | 49,497 in | 48,395 in |
+| B · ovi, kynnys | 32,747 in | 28,927 in |
 | C · sivuseinä, vino sivu | 49,497 in | 49,497 in |
-| C · sivuseinä, kynnys | 68,403 in | 67,521 in |
+| C · sivuseinä, kynnys | 68,403 in | 66,198 in |
 | E · kulmaleija, jatkettu sivu | 49,497 in | 43,724 in |
 
 **Älä tee sisäkuorta skaalaamalla ulkokuorta.** Jatketut sivut päättyvät lattiatasoon, eikä

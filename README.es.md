@@ -140,10 +140,10 @@ caras de abajo no se construyen: los tipos B, C y E se prolongan hasta la plataf
 | Listón | Carcasa exterior | Carcasa interior |
 |---|---:|---:|
 | Aristas simples — tipos A y D, y las aristas no prolongadas de B, C y E | 18.906 in | 16.701 in |
-| B · puerta, lado vertical | 49.497 in | 49.056 in |
-| B · puerta, solera | 32.747 in | 31.218 in |
+| B · puerta, lado vertical | 49.497 in | 48.395 in |
+| B · puerta, solera | 32.747 in | 28.927 in |
 | C · pared lateral, lado inclinado | 49.497 in | 49.497 in |
-| C · pared lateral, solera | 68.403 in | 67.521 in |
+| C · pared lateral, solera | 68.403 in | 66.198 in |
 | E · cometa de esquina, lado prolongado | 49.497 in | 43.724 in |
 
 **No hagas la carcasa interior escalando la exterior.** Los lados prolongados terminan en la
